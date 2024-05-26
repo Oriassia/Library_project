@@ -35,4 +35,8 @@ function showBookCard(book) {
   elementBookCard.innerHTML += `<p> <h3>Descriotion:</h3> ${book.short_description}</p>`;
   elementBookCard.innerHTML += `<p><h3>Copies:</h3> ${book.num_copies}</p>`;
   elementBookCard.innerHTML += `<p> <h3>Categories:</h3> ${book.categories}</p>`;
+  elementBookCard.innerHTML += `<p> <h3>ISBN:</h3> ${book.ISBN}</p>`;
+  elementBookCard.innerHTML += `<button>Delete book</button>`;
+  elementBookCard.innerHTML += `<button>Increment copies</button>`;
+  elementBookCard.innerHTML += `<button>Decrement copies</button>`;
 }
