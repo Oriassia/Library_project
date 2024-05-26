@@ -12,6 +12,45 @@
         "Religion"
       ],
       "ISBN": "1932687564"
+    },
+    {
+      "id": "469c",
+      "name": "A Mosaic of Israel's Traditions",
+      "author": "Esther Shkalim",
+      "num_pages": 322,
+      "short_description": "Subtitle on cover: Unity through diversity.",
+      "image": "http://books.google.com/books/content?id=NCutNgYYpjgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Religion"
+      ],
+      "ISBN": "1932687564"
+    },
+    {
+      "id": "b9e4",
+      "name": "A Mosaic of Israel's Traditions",
+      "author": "Esther Shkalim",
+      "num_pages": 322,
+      "short_description": "Subtitle on cover: Unity through diversity.",
+      "image": "http://books.google.com/books/content?id=NCutNgYYpjgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Religion"
+      ],
+      "ISBN": "1932687564"
+    },
+    {
+      "id": "fca0",
+      "name": "A Mosaic of Israel's Traditions",
+      "author": "Esther Shkalim",
+      "num_pages": 322,
+      "short_description": "Subtitle on cover: Unity through diversity.",
+      "image": "http://books.google.com/books/content?id=NCutNgYYpjgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Religion"
+      ],
+      "ISBN": "1932687564"
     }
   ]
 }
