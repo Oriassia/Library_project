@@ -58,11 +58,13 @@
       <nav class="nav-bar">
         <a href="">Home</a>
         <a href="">Add book</a>
+        <a href="">History</a>
+        <a href="">Favorite</a>
       </nav>
       <div class="background"></div>
       <div class="content">
-        <div class="books-list">
-          <ul>
+        <div class="books-list ">
+          <ul >
             <li>Harry Potter and the Philosopher's Stone</li>
             <li>Harry Potter and the Chamber of Secrets</li>
             <li>Harry Potter and the Prisoner of Azkaban</li>
@@ -71,15 +73,19 @@
             <li>Harry Potter and the Half-Blood Prince</li>
             <li>Harry Potter and the Deathly Hallows</li>
           </ul>
+          <div class="next-previous">
+            <button>Previous</button>
+            <button>Next</button>
+          </div>
         </div>
         <div class="book-card shadow"></div>
       </div>
+      <button style="margin: 20px" id="post-data" onclick="postBooksData()">
+        post data
+      </button>
       <footer><p>footer</p></footer>
     </main>
 
-    <button style="margin: 20px" id="post-data" onclick="postBooksData()">
-      post data
-    </button>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
   </body>
