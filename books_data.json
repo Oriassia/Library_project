@@ -1,7 +1,19 @@
 {
   "books": [
     {
-      "id": "e913",
+      "id": "c07a",
+      "name": "A Hebrew reader",
+      "author": "Eli Noyes",
+      "num_pages": 204,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=8R5IAQAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Hebrew language"
+      ]
+    },
+    {
+      "id": "0556",
       "name": "A Mosaic of Israel's Traditions",
       "author": "Esther Shkalim",
       "num_pages": 322,
@@ -12,6 +24,105 @@
         "Religion"
       ],
       "ISBN": "1932687564"
+    },
+    {
+      "id": "54a5",
+      "name": "A Grammar of the English language for the use of Hebrews",
+      "author": "Unknown",
+      "num_pages": 158,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=BclL2lJNCH0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Uncategorized"
+      ]
+    },
+    {
+      "id": "0208",
+      "name": "A BROAD VIEW of SCIENCE and MORAL VALUES",
+      "author": "Unknown",
+      "num_pages": 210,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=hjSe3cdtDTgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Uncategorized"
+      ],
+      "ISBN": "9789659162161"
+    },
+    {
+      "id": "4d5b",
+      "name": "A gift album of Jewish ceremonies",
+      "author": "Johann Georg Puschner",
+      "num_pages": 70,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=xUxEAAAAcAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Uncategorized"
+      ]
+    },
+    {
+      "id": "10d0",
+      "name": "A New Practical and Easy Method of Learning the Hebrew Language",
+      "author": "Salomon Herxheimer",
+      "num_pages": 146,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=UsENSaInc9MC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Hebrew language"
+      ]
+    },
+    {
+      "id": "1487",
+      "name": "BABADADA black-and-white, Asante-twi - Hebrew (in hebrew script), dihyinari a yεhwε - visual dictionary (in hebrew script)",
+      "author": "Babadada GmbH",
+      "num_pages": 94,
+      "short_description": "BABADADA dictionaries are visual language education: Simple learning takes center stage. In a BABADADA dictionary images and language merge into a unit that is easy to learn and remember. Each book contains over 1000 black-and-white illustrations. The goal is to learn the basics of a language much faster and with more fun than possible with a complicated text dictionary. This book is based on the very successful online picture dictionary BABADADA.COM, which offers easy language entry for countless language combinations - Used by thousands of people and approved by well-known institutions. The languages used in this book are also called as follows: Hebräisch, hébreu, hebreo, ebraico, hebraico, hebrajski",
+      "image": "http://books.google.com/books/content?id=Z2MDEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Study Aids"
+      ],
+      "ISBN": "9783752241556"
+    },
+    {
+      "id": "e3eb",
+      "name": "ad optimorum ... codicum fidem collata (a) Joh. Henr. Maio. Collationem ... ac ... cetera emendatae editionis requisita addidit Georgius Christ. Bürcklin",
+      "author": "Biblia hebraice",
+      "num_pages": 1428,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=SLpIAAAAcAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Uncategorized"
+      ]
+    },
+    {
+      "id": "7fc0",
+      "name": "A bilingual concordance to the Targum of the Prophets",
+      "author": "Johannes Cornelis de Moor",
+      "num_pages": 400,
+      "short_description": "The bilingual (Aramaic-Hebrew) concordance to the Targum of the Prophets is the product of an international project based in the Theological University of the Reformed Churches in the Netherlands, Kampen (ThUK) and supported by the Netherlands Organization for Scientific Research (NWO). With this publication a major research tool becomes available to those engaged in Biblical and Jewish Studies. For the first time meaningful quotations from the Targum and the Masoretic Hebrew text of the Bible are set out in parallel so that the user of the concordance can study the translation technique of the Targum in much greater detail than was hitherto possible. The concordance opens up Targum Jonathan to scholars in various fields. It is an indispensable tool not only for research in the fields of textual criticism and the history of interpretation of the Hebrew Bible, but also for the study of early Judaism, the New Testament and patristics.To facilitate consultation on the basis of the Hebrew, every concordance per book contains a Hebrew-Aramaic index. The final volume will contain additions and corrections, a cumulative Aramaic-Hebrew index, as well as an English-Aramaic index.",
+      "image": "http://books.google.com/books/content?id=mndph1RM6rMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Religion"
+      ],
+      "ISBN": "9004126414"
+    },
+    {
+      "id": "c281",
+      "name": "אגרות שד\"ל",
+      "author": "שמואל דוד בן חזקיה לוצטו",
+      "num_pages": 396,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=DwaMBIICGQEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Hebrew language"
+      ]
     }
   ]
 }
