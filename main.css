@@ -5,12 +5,16 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #8ecae6;
+  background-color: #8ecae6;  
 }
 .search-bar input,
 .search-bar i {
   margin-block: 30px;
   margin-inline: 5px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  outline: none;
 }
 
 svg {
@@ -42,16 +46,24 @@ svg {
 }
 .content {
   display: flex;
+  
 }
 
 ul {
   padding-left: 0;
 }
 .content li {
+  margin: 15px;
   list-style: none;
   padding: 20px;
-  border-bottom: solid 1px black;
-  border-right: solid 1px black;
+  border: solid 1px black;
+  border-radius: 5px;
+  
+}
+.next-previous{
+  margin-block:15px ;
+  display: flex;
+  justify-content: space-around;
 }
 
 .book-card {
