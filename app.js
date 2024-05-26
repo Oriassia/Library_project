@@ -31,7 +31,7 @@ let worldLibraryUrl = "https://www.googleapis.com/books/v1/volumes?q=a&key=AIzaS
                         image: (volumeInfo.imageLinks && volumeInfo.imageLinks.thumbnail) || 'https://example.com/no-image.jpg',
                         num_copies: 5,
                         categories: volumeInfo.categories || ['Uncategorized'],
-                        ISBN: volumeInfo.industryIdentifiers ? volumeInfo.industryIdentifiers.find(id => id.type === 'ISBN_10' || id.type === 'ISBN_13')?.identifier : "N/A"
+                        ISBN: volumeInfo.industryIdentifiers ? volumeInfo.industryIdentifiers[0].identifier : "None"
                     });
                     booksCounter ++;
                     if (booksCounter >= 100) {
