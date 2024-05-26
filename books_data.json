@@ -1,6 +1,7 @@
 {
   "books": [
     {
+
       "id": "f40c",
       "name": "A Hebrew reader",
       "author": "Eli Noyes",
@@ -110,7 +111,6 @@
       "categories": [
         "Religion"
       ],
-
       "ISBN": "9004126414"
     },
     {

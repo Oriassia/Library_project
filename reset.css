@@ -67,3 +67,7 @@ h6 {
 #__next {
   isolation: isolate;
 }
+h3{
+  display: inline-block;
+  font-weight: 600;
+}
