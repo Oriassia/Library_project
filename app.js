@@ -1,13 +1,15 @@
-
-const url = "http://localhost:8001/books?_page=";
+let worldLibraryUrl =
+  "https://www.googleapis.com/books/v1/volumes?q=a&key=AIzaSyAj03UVAQuKO-sABUxmqOPr8gMxJrna9TQ";
+let localLibraryUrl = "http://localhost:8001/books";
 const elementBooksList = document.querySelector(".books-list");
 const elementBookCard = document.querySelector(".book-card");
 
 let next = 1;
+
 showBookByPage(next);
 async function showBookByPage(next) {
   elementBooksList.innerHTML = "";
-  const response = await axios.get(`${url}${next}`);
+  const response = await axios.get(`${localLibraryUrl}?_page=${next}`);
   const booksArray = response.data.data;
   console.log(booksArray);
   for (const book of booksArray) {
@@ -15,10 +17,12 @@ async function showBookByPage(next) {
   }
   showBookCard(booksArray[0]);
 }
+
 function nextPage() {
   next++;
   showBookByPage(next);
 }
+
 function previousPage() {
   if (next > 1) {
     next--;
@@ -36,25 +40,27 @@ function showBookCard(book) {
   elementBookCard.innerHTML += `<p> <h3>Descriotion:</h3> ${book.short_description}</p>`;
   elementBookCard.innerHTML += `<p><h3>Copies:</h3> ${book.num_copies}</p>`;
   elementBookCard.innerHTML += `<p> <h3>Categories:</h3> ${book.categories}</p>`;
+  elementBookCard.innerHTML += `<p> <h3>ISBN:</h3> ${book.ISBN}</p>`;
+  elementBookCard.innerHTML += `<button>Delete book</button>`;
+  elementBookCard.innerHTML += `<button>Increment copies</button>`;
+  elementBookCard.innerHTML += `<button>Decrement copies</button>`;
 }
 
-let worldLibraryUrl = "https://www.googleapis.com/books/v1/volumes?q=a&key=AIzaSyAj03UVAQuKO-sABUxmqOPr8gMxJrna9TQ";
-        let localLibraryUrl = "http://localhost:8001/books";
+async function fetchBooks(startIndex) {
+  try {
+    const response = await axios.get(
+      `${worldLibraryUrl}&startIndex=${startIndex}&maxResults=40`
+    );
+    return response.data.items || [];
+  } catch (error) {
+    console.error("Error fetching books:", error);
+    return [];
+  }
+}
 
-        async function fetchBooks(startIndex) {
-            try {
-                const response = await axios.get(`${worldLibraryUrl}&startIndex=${startIndex}&maxResults=40`);
-                return response.data.items || [];
-            } catch (error) {
-                console.error('Error fetching books:', error);
-                return [];
-            }
-        }
-
-        async function postFirstBooks() {
-            let booksCounter = 0;
-            let startIndex = 0;
-
+async function postFirstBooks() {
+  let booksCounter = 0;
+  let startIndex = 0;
             while (booksCounter < 100) {
                 const items = await fetchBooks(startIndex);
                 if (!items || items.length === 0) {
@@ -80,4 +86,4 @@ let worldLibraryUrl = "https://www.googleapis.com/books/v1/volumes?q=a&key=AIzaS
                 startIndex += 40; // Move to the next set of books
             }
         }
-
+ 

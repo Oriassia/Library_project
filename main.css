@@ -81,7 +81,7 @@ ul {
   align-self:flex-start;
 }
 .book-card p,.book-card h3{
-  margin: 10px;
+  margin: 5px;
   
   
 }
@@ -93,6 +93,10 @@ ul {
 .shadow {
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+button{
+  margin: 8px;
+  background-color:  #ffb703 ;
 }
 
 footer {
