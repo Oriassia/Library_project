@@ -1,6 +1,9 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
+html{
+    height: 100vh;
+}
 *,
 *::before,
 *::after {
@@ -18,6 +21,7 @@
     4. Improve text rendering
   */
 body {
+  
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }

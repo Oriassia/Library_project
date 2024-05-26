@@ -12,11 +12,36 @@
     <link rel="stylesheet" href="reset.css" />
   </head>
   <body>
-    <div class="search-bar">
-      <img src="icon.png" alt="Home icon" />
-      <input type="text" placeholder="Book name" />
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
+    <main>
+      <div>
+        <img src="icon.png" alt="Home icon" class="home-icon" />
+        <div class="search-bar">
+          <input type="text" placeholder="Book name" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <nav class="nav-bar">
+        <a href="">Home</a>
+        <a href="">Add book</a>
+      </nav>
+      <div class="background"></div>
+      <div class="content">
+        <div class="books-list">
+          <ul>
+            <li>Harry Potter and the Philosopher's Stone</li>
+            <li>Harry Potter and the Chamber of Secrets</li>
+            <li>Harry Potter and the Prisoner of Azkaban</li>
+            <li>Harry Potter and the Goblet of Fire</li>
+            <li>Harry Potter and the Order of the Phoenix</li>
+            <li>Harry Potter and the Half-Blood Prince</li>
+            <li>Harry Potter and the Deathly Hallows</li>
+          </ul>
+        </div>
+        <div class="book-card shadow"></div>
+      </div>
+      <footer><p>footer</p></footer>
+    </main>
+   
     <button onclick="postBooksData()">post data</button>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
