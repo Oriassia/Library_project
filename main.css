@@ -13,9 +13,11 @@ main {
   margin-inline: 5px;
 }
 
-.home-icon {
-  width: 80px;
-  height: 80px;
+svg {
+    margin-top:20px;
+    margin-left: 20px;
+  width: 70px;
+  height: 60px;
   position: absolute;
 }
 
@@ -38,16 +40,28 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.content{
-    display: flex;
+.content {
+  display: flex;
+}
+
+ul {
+  padding-left: 0;
+}
+.content li {
+  list-style: none;
+  padding: 20px;
+  border-bottom: solid 1px black;
+  border-right: solid 1px black;
 }
 
 .book-card {
-  width: 190px;
-  height: 254px;
+  width: 50%;
+  height: 350px;
   background: white;
   border-radius: 10px;
   transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-inline: auto;
+  align-self: center;
 }
 
 .shadow {
@@ -56,7 +70,7 @@ main {
 }
 
 footer {
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
