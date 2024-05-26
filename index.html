@@ -63,19 +63,11 @@
       </nav>
       <div class="background"></div>
       <div class="content">
-        <div class="books-list ">
-          <ul >
-            <li>Harry Potter and the Philosopher's Stone</li>
-            <li>Harry Potter and the Chamber of Secrets</li>
-            <li>Harry Potter and the Prisoner of Azkaban</li>
-            <li>Harry Potter and the Goblet of Fire</li>
-            <li>Harry Potter and the Order of the Phoenix</li>
-            <li>Harry Potter and the Half-Blood Prince</li>
-            <li>Harry Potter and the Deathly Hallows</li>
-          </ul>
+        <div class="books-list-container">
+          <ul class="books-list"></ul>
           <div class="next-previous">
-            <button>Previous</button>
-            <button>Next</button>
+            <button onclick="previousPage()">Previous</button>
+            <button onclick="nextPage()">Next</button>
           </div>
         </div>
         <div class="book-card shadow"></div>
@@ -87,6 +79,7 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="get_books_data.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
