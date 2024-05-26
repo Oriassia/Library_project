@@ -1,8 +1,8 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-html{
-    height: 100vh;
+html {
+  height: 100vh;
 }
 *,
 *::before,
@@ -14,6 +14,10 @@ html{
   */
 * {
   margin: 0;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 /*
     Typographic tweaks!
@@ -21,7 +25,6 @@ html{
     4. Improve text rendering
   */
 body {
-  
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
