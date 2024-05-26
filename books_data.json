@@ -1,26 +1,13 @@
 {
   "books": [
     {
-      "id": "9805",
-      "name": "A Hebrew reader",
-      "author": "Eli Noyes",
-      "num_pages": 204,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=8R5IAQAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Hebrew language"
-      ],
-      "ISBN": "NYPL:33433113860310"
-    },
-    {
       "id": "964d",
       "name": "A Mosaic of Israel's Traditions",
       "author": "Esther Shkalim",
       "num_pages": 322,
       "short_description": "Subtitle on cover: Unity through diversity.",
       "image": "http://books.google.com/books/content?id=NCutNgYYpjgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
+      "num_copies": 6,
       "categories": [
         "Religion"
       ],
@@ -33,7 +20,7 @@
       "num_pages": 158,
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=BclL2lJNCH0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
+      "num_copies": 6,
       "categories": [
         "Uncategorized"
       ],
@@ -46,7 +33,7 @@
       "num_pages": 210,
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=hjSe3cdtDTgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
+      "num_copies": 6,
       "categories": [
         "Uncategorized"
       ],
@@ -285,19 +272,6 @@
         "Celibacy"
       ],
       "ISBN": "UOM:69015000001103"
-    },
-    {
-      "id": "f885",
-      "name": "A Defence of the Record of Revelation Agaisnt \"Christian Theology and Modern Scepticism.\".",
-      "author": "John Du Boulay",
-      "num_pages": 36,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=GOUbAbq33q4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "BL:A0021970351"
     }
   ],
   "history": []

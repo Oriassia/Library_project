@@ -5,7 +5,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #8ecae6;  
+  background-color: #8ecae6;
 }
 .search-bar input,
 .search-bar i {
@@ -46,9 +46,8 @@ svg {
 }
 .content {
   display: flex;
-  
 }
-.books-list-container{
+.books-list-container {
   max-width: 600px;
 }
 ul {
@@ -60,10 +59,9 @@ ul {
   padding: 20px;
   border: solid 1px black;
   border-radius: 5px;
-  
 }
-.next-previous{
-  margin-block:15px ;
+.next-previous {
+  margin-block: 15px;
   display: flex;
   justify-content: space-around;
 }
@@ -73,19 +71,18 @@ ul {
   padding: 30px;
   margin-top: 40px;
   width: 50%;
-  height: 100vh;
+
   background: white;
   border-radius: 10px;
   transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   margin-inline: auto;
-  align-self:flex-start;
+  align-self: flex-start;
 }
-.book-card p,.book-card h3{
+.book-card p,
+.book-card h3 {
   margin: 5px;
-  
-  
 }
-.book-card img{
+.book-card img {
   margin: 10px;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
@@ -94,9 +91,9 @@ ul {
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
-button{
+button {
   margin: 8px;
-  background-color:  #ffb703 ;
+  background-color: #ffb703;
 }
 
 footer {
