@@ -46,11 +46,29 @@ function showBookCard(book) {
   elementBookCard.innerHTML += `<p><h3>Copies:</h3> ${book.num_copies}</p>`;
   elementBookCard.innerHTML += `<p> <h3>Categories:</h3> ${book.categories}</p>`;
   elementBookCard.innerHTML += `<p> <h3>ISBN:</h3> ${book.ISBN}</p>`;
-  elementBookCard.innerHTML += `<button>Delete book</button>`;
-  elementBookCard.innerHTML += `<button>Increment copies</button>`;
-  elementBookCard.innerHTML += `<button>Decrement copies</button>`;
+  elementBookCard.innerHTML += `<button class = "delete-button">Delete book</button>`;
+  elementBookCard.innerHTML += `<button class = "Increment-button">Increment copies</button>`;
+  elementBookCard.innerHTML += `<button class = "Decrement-button">Decrement copies</button>`;
+
+  const elemDeleteButton = document.querySelector(".delete-button");
+  const elemIncrementButton = document.querySelector(".Increment-button");
+  const elemDecrementButton = document.querySelector(".Decrement-button");
+
+  elemDeleteButton.onclick = () => deleteBook(book.id);
+  elemIncrementButton.onclick = () => incrementBook(book.id, book.num_copies);
+  elemDecrementButton.onclick = () => decrementBook(book.id, book.num_copies);
 }
 
+function deleteBook(id) {
+  axios.delete(`${localLibraryUrl}/${id}`);
+}
+
+function incrementBook(id, copies) {
+  axios.patch(`${localLibraryUrl}/${id}`, { num_copies: copies + 1 });
+}
+function decrementBook(id, copies) {
+  axios.patch(`${localLibraryUrl}/${id}`, { num_copies: copies - 1 });
+}
 async function fetchBooks(startIndex) {
   try {
     const response = await axios.get(
