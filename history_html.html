@@ -56,49 +56,60 @@
         </div>
       </div>
       <nav class="nav-bar">
-        <a href="">Home</a>
-        <a href="">Add book</a>
-        <a href="">History</a>
+        <a href="/home_html.html">Home</a>
+        <a href="/addBook_html.html">Add book</a>
+        <a href="/history_html.html">History</a>
         <a href="">Favorite</a>
       </nav>
       <div class="background"></div>
-      <div style="display: none" class="history-content">
-        <table class="history-table">
-          <tr>
+      <div class="history-content">
+        <table class="history-table"></table>
+      </div>
+      <img src="" alt="" />
+      <footer><p>footer</p></footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      showHistory();
+
+      async function showHistory() {
+        try {
+          const response = await axios.get("http://localhost:8001/history");
+          const historyData = response.data;
+          let historyTableElem = document.querySelector(".history-table");
+
+          // Clear existing rows in case the function is called multiple times
+          historyTableElem.innerHTML = `<tr>
             <th>Place</th>
             <th>Image</th>
             <th>Name</th>
             <th>ISBN</th>
             <th>Action</th>
             <th>Date & Time</th>
-          </tr>
-        </table>
-      </div>
-      <img src="" alt="" />
-      <div class="books-content">
-        <div class="books-list-container">
-          <div class="books-list-container-header">books:</div>
-          <ul class="books-list"></ul>
-          <div class="next-previous">
-            <button class="prev" onclick="previousPage()">Previous</button>
-            <button class="next" onclick="nextPage()">Next</button>
-          </div>
-        </div>
-        <div class="book-card shadow"></div>
-      </div>
-      <button
-        style="margin: 20px"
-        id="post-data"
-        onclick="fetchMultiplePages()"
-      >
-        post data
-      </button>
-      <footer><p>footer</p></footer>
-      <div class="book-card-buttons"></div>
-    </main>
+          </tr>`;
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="get_books_data.js"></script>
-    <script src="app.js"></script>
+          for (const obj of historyData) {
+            historyTableElem.innerHTML += `<tr>
+                        <td>${historyData.indexOf(obj) + 1}</td>
+                        <td><img src="${obj.image}" alt=""></td>
+                        <td>${obj.bookName}</td>
+                        <td>${obj.ISBN}</td>
+                        <td>${obj.action}</td>
+                        <td>${obj.date}</td>
+                    </tr>`;
+          }
+
+          document.querySelector(".history-content").style.display = "block";
+        } catch (error) {
+          console.error("Error fetching history data:", error);
+        }
+      }
+
+      // Example function to demonstrate button functionality
+      async function fetchMultiplePages() {
+        console.log("fetchMultiplePages called");
+      }
+    </script>
   </body>
 </html>

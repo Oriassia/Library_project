@@ -17,6 +17,10 @@ main {
   outline: none;
 }
 
+.search-bar i {
+  cursor: pointer;
+}
+
 svg {
   margin-top: 20px;
   margin-left: 20px;
@@ -44,21 +48,26 @@ svg {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .books-content {
+  padding-inline: 30px;
+  padding-block: 20px;
   display: flex;
+  gap: 20px;
 }
+
 .books-list-container {
   max-width: 600px;
 }
 ul {
-  padding-left: 0;
+  /* padding-left: 0; */
 }
 .books-content li {
-  margin: 15px;
+  /* margin: 15px; */
   list-style: none;
   padding: 20px;
   border: solid 1px black;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 .next-previous {
   margin-block: 15px;
@@ -67,22 +76,44 @@ ul {
 }
 
 .book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-size: 18px;
   padding: 30px;
-  margin-top: 40px;
-  width: 50%;
-
+  padding-inline: 50px;
+  margin-top: 25px;
+  width: 100%;
+  max-height: 800px;
   background: white;
   border-radius: 10px;
   transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  margin-inline: auto;
-  align-self: flex-start;
 }
-.book-card p,
-.book-card h3 {
-  margin: 5px;
+
+.book-card-content {
+  display: flex;
+  flex-direction: column;
 }
-.book-card img {
+
+.book-card-content-header {
+  display: flex;
+  gap: 40px;
+}
+
+.book-card-content-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.book-card-content-body {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5px;
+}
+
+.book-card-content img {
+  max-width: 150px;
   margin: 10px;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
@@ -94,6 +125,9 @@ ul {
 button {
   margin: 8px;
   background-color: #ffb703;
+  cursor: pointer;
+  padding-inline: 10px;
+  padding-block: 3px;
 }
 
 footer {
@@ -104,4 +138,54 @@ footer {
   background-color: #023047;
   color: white;
   text-align: center;
+}
+
+/* Table design */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  font-family: "Roboto Mono", monospace;
+  background-color: #e8dfc1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-table th,
+.history-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #dddddd;
+}
+
+.history-table th {
+  background-color: #023047;
+  color: #ffffff;
+}
+
+.history-table tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+.history-table tr:hover {
+  background-color: #ffb703;
+  color: #ffffff;
+}
+
+.history-table img {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Add book form design */
+.add-book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  max-width: 600px;
+  padding-left: 20px;
+  /* padding-inline: 40px; */
 }
