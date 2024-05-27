@@ -1,13 +1,22 @@
 let worldLibraryUrl =
   "https://www.googleapis.com/books/v1/volumes?q=a&key=AIzaSyAj03UVAQuKO-sABUxmqOPr8gMxJrna9TQ";
 let localLibraryUrl = "http://localhost:8001/books";
+
 const elementBooksList = document.querySelector(".books-list");
 const elementBookCard = document.querySelector(".book-card");
+const elemetSearchButton = document.querySelector(".fa-magnifying-glass");
 
+let filterArray = [];
 let next = 1;
 let previous;
+let totalPages;
+let pageToStart = next;
 
-showBookByPage(next);
+inIt();
+function inIt() {
+  showBookByPage(next);
+  elemetSearchButton.addEventListener("click", searchBar);
+}
 
 async function showBookByPage(pageNum) {
   elementBooksList.innerHTML = "";
@@ -16,15 +25,20 @@ async function showBookByPage(pageNum) {
   console.log(response.data);
   next = response.data.next;
   previous = response.data.prev;
-  for (const book of booksArray) {
+  totalPages = response.data.pages;
+  printList(booksArray);
+  showBookCard(booksArray[0]);
+}
+
+function printList(array) {
+  for (const book of array) {
     elementBooksList.innerHTML += `<li>${book.name}</li>`;
   }
   const liNodeList = document.querySelectorAll("li");
 
   liNodeList.forEach((li, i) => {
-    li.onclick = () => showBookCard(booksArray[i]);
+    li.onclick = () => showBookCard(array[i]);
   });
-  showBookCard(booksArray[0]);
 }
 
 function nextPage() {
@@ -114,4 +128,34 @@ async function postFirstBooks() {
     }
     startIndex += 40; // Move to the next set of books
   }
+}
+
+async function searchPerPage(substring, pageToStart, endOfSearch) {
+  let holder = [];
+
+  for (let page = pageToStart; page < totalPages + 1; page++) {
+    const response = await axios.get(`${localLibraryUrl}?_page=${page}`);
+    const booksArrayByPage = response.data.data;
+
+    holder = booksArrayByPage.filter((book) => book.name.includes(substring));
+    for (const item of holder) {
+      filterArray.push(item);
+    }
+    if (filterArray.length >= endOfSearch * 10) {
+      console.log(filterArray);
+      return filterArray;
+    }
+  }
+  console.log(filterArray);
+  return filterArray;
+}
+
+async function searchBar() {
+  elementBooksList.innerHTML = "";
+  let endOfSearch = 1;
+  const elementSearchInput = document.querySelector(".search-bar-input");
+  const searchValue = elementSearchInput.value;
+  filterArray = await searchPerPage(searchValue, pageToStart, endOfSearch);
+  printList(filterArray);
+  filterArray = [];
 }
