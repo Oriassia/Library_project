@@ -17,6 +17,10 @@ main {
   outline: none;
 }
 
+.search-bar i {
+  cursor: pointer;
+}
+
 svg {
   margin-top: 20px;
   margin-left: 20px;
@@ -94,6 +98,7 @@ ul {
 button {
   margin: 8px;
   background-color: #ffb703;
+  cursor: pointer;
 }
 
 footer {
@@ -104,4 +109,54 @@ footer {
   background-color: #023047;
   color: white;
   text-align: center;
+}
+
+/* Table design */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  font-family: "Roboto Mono", monospace;
+  background-color: #e8dfc1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-table th,
+.history-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #dddddd;
+}
+
+.history-table th {
+  background-color: #023047;
+  color: #ffffff;
+}
+
+.history-table tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+.history-table tr:hover {
+  background-color: #ffb703;
+  color: #ffffff;
+}
+
+.history-table img {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Add book form design */
+.add-book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  max-width: 600px;
+  padding-left: 20px;
+  /* padding-inline: 40px; */
 }

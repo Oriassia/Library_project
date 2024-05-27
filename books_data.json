@@ -1,98 +1,59 @@
 {
   "books": [
     {
-      "id": "e82f",
-      "name": "A Key to the Pentateuch",
-      "author": "Solomon Deutsch",
-      "num_pages": 104,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=MwQ7hekUD5AC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "id": "964d",
+      "name": "A Mosaic of Israel's Traditions",
+      "author": "Esther Shkalim",
+      "num_pages": 322,
+      "short_description": "Subtitle on cover: Unity through diversity.",
+      "image": "http://books.google.com/books/content?id=NCutNgYYpjgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 6,
       "categories": [
-        "Bible"
-      ],
-      "ISBN": "NLI:2312570-10"
-    },
-    {
-      "id": "076a",
-      "name": "A Hebrew Alexander Romance According to MS Héb. 671.5 Paris, Bibliothèque Nationale",
-      "author": "Bekkum",
-      "num_pages": 191,
-      "short_description": "This book represents a critical edition of the Alexander Romance found in MS Héb. 671.5 from the Bibliothèque Nationale in Paris.",
-      "image": "http://books.google.com/books/content?id=MNj7EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Architecture"
-      ],
-      "ISBN": "9789004672529"
-    },
-    {
-      "id": "c507",
-      "name": "A Concordance of the Hebrew and Chaldee Scriptures",
-      "author": "Benjamin Davidson",
-      "num_pages": 930,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=TFKolswcyNkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Aramaic language"
-      ],
-      "ISBN": "NLI:1969062-10"
-    },
-    {
-      "id": "a9f3",
-      "name": "A Bilingual Concordance to the Targum of the Prophets",
-      "author": "Johannes C. De Moor",
-      "num_pages": 430,
-      "short_description": "This concordance aligns the Targum and the Masoretic text in a convenient way, disclosing for the first time the expositional wealth of the Targum to the Prophets. With Hebrew-Aramaic index.",
-      "image": "http://books.google.com/books/content?id=lonHW-W-1O0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
         "Religion"
       ],
-      "ISBN": "9004102779"
+      "ISBN": "1932687564"
     },
     {
-      "id": "23c4",
-      "name": "A Concordance of the Hebrew and Chaldee Scriptures Revised and Corrected",
-      "author": "Benjamin Davidson (Writer on Hebrew.)",
-      "num_pages": 932,
+      "id": "1cb8",
+      "name": "A Grammar of the English language for the use of Hebrews",
+      "author": "Unknown",
+      "num_pages": 158,
       "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=t-qMI_l5bJIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "http://books.google.com/books/content?id=BclL2lJNCH0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 6,
+      "categories": [
+        "Uncategorized"
+      ],
+      "ISBN": "BDM:13020100008805"
+    },
+    {
+      "id": "3218",
+      "name": "A BROAD VIEW of SCIENCE and MORAL VALUES",
+      "author": "Unknown",
+      "num_pages": 210,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=hjSe3cdtDTgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 6,
+      "categories": [
+        "Uncategorized"
+      ],
+      "ISBN": "9789659162161"
+    },
+    {
+      "id": "2c75",
+      "name": "A gift album of Jewish ceremonies",
+      "author": "Johann Georg Puschner",
+      "num_pages": 70,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=xUxEAAAAcAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
       "categories": [
         "Uncategorized"
       ],
-      "ISBN": "NLS:V000565854"
+      "ISBN": "BSB:BSB10240944"
     },
     {
-      "id": "165a",
-      "name": "A Wisp of Myrrh in a Bed of Spices",
-      "author": "Abraham Shaffner",
-      "num_pages": 360,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=zOTUAAAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "IND:30000081549994"
-    },
-    {
-      "id": "c51d",
-      "name": "A Bilingual Concordance to the Targum of the Prophets",
-      "author": "Johannes Cornelis de Moor",
-      "num_pages": 540,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=QqRC9wZMxxAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Religion"
-      ],
-      "ISBN": "9004104623"
-    },
-    {
-      "id": "deb2",
+      "id": "0b4e",
       "name": "A New Practical and Easy Method of Learning the Hebrew Language",
       "author": "Salomon Herxheimer",
       "num_pages": 146,
@@ -105,7 +66,59 @@
       "ISBN": "NLI:2010604-10"
     },
     {
-      "id": "b0cf",
+      "id": "e0b3",
+      "name": "BABADADA black-and-white, Asante-twi - Hebrew (in hebrew script), dihyinari a yεhwε - visual dictionary (in hebrew script)",
+      "author": "Babadada GmbH",
+      "num_pages": 94,
+      "short_description": "BABADADA dictionaries are visual language education: Simple learning takes center stage. In a BABADADA dictionary images and language merge into a unit that is easy to learn and remember. Each book contains over 1000 black-and-white illustrations. The goal is to learn the basics of a language much faster and with more fun than possible with a complicated text dictionary. This book is based on the very successful online picture dictionary BABADADA.COM, which offers easy language entry for countless language combinations - Used by thousands of people and approved by well-known institutions. The languages used in this book are also called as follows: Hebräisch, hébreu, hebreo, ebraico, hebraico, hebrajski",
+      "image": "http://books.google.com/books/content?id=Z2MDEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Study Aids"
+      ],
+      "ISBN": "9783752241556"
+    },
+    {
+      "id": "26b3",
+      "name": "ad optimorum ... codicum fidem collata (a) Joh. Henr. Maio. Collationem ... ac ... cetera emendatae editionis requisita addidit Georgius Christ. Bürcklin",
+      "author": "Biblia hebraice",
+      "num_pages": 1428,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=SLpIAAAAcAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Uncategorized"
+      ],
+      "ISBN": "ONB:+Z137111408"
+    },
+    {
+      "id": "eed4",
+      "name": "A bilingual concordance to the Targum of the Prophets",
+      "author": "Johannes Cornelis de Moor",
+      "num_pages": 400,
+      "short_description": "The bilingual (Aramaic-Hebrew) concordance to the Targum of the Prophets is the product of an international project based in the Theological University of the Reformed Churches in the Netherlands, Kampen (ThUK) and supported by the Netherlands Organization for Scientific Research (NWO). With this publication a major research tool becomes available to those engaged in Biblical and Jewish Studies. For the first time meaningful quotations from the Targum and the Masoretic Hebrew text of the Bible are set out in parallel so that the user of the concordance can study the translation technique of the Targum in much greater detail than was hitherto possible. The concordance opens up Targum Jonathan to scholars in various fields. It is an indispensable tool not only for research in the fields of textual criticism and the history of interpretation of the Hebrew Bible, but also for the study of early Judaism, the New Testament and patristics.To facilitate consultation on the basis of the Hebrew, every concordance per book contains a Hebrew-Aramaic index. The final volume will contain additions and corrections, a cumulative Aramaic-Hebrew index, as well as an English-Aramaic index.",
+      "image": "http://books.google.com/books/content?id=mndph1RM6rMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Religion"
+      ],
+      "ISBN": "9004126414"
+    },
+    {
+      "id": "28b1",
+      "name": "אגרות שד\"ל",
+      "author": "שמואל דוד בן חזקיה לוצטו",
+      "num_pages": 396,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=DwaMBIICGQEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Hebrew language"
+      ],
+      "ISBN": "NLI:1978775-260"
+    },
+    {
+      "id": "e965",
       "name": "Rational Theology. A lecture, etc",
       "author": "Francis Reginald Statham",
       "num_pages": 20,
@@ -118,20 +131,7 @@
       "ISBN": "BL:A0021970424"
     },
     {
-      "id": "ace0",
-      "name": "Free Trade in Land ... With a reprint of the ... pamphlet published by the Anti-Corn-Law League “The Constituional right to a revision of the Land Tax” ... Second edition",
-      "author": "James Beal",
-      "num_pages": 182,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=a-xOnCp-3noC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "BL:A0022108572"
-    },
-    {
-      "id": "cf1e",
+      "id": "fbf7",
       "name": "A Memorial of the Rev. James W. Dale, D.D.",
       "author": "James Roberts",
       "num_pages": 154,
@@ -144,7 +144,7 @@
       "ISBN": "HARVARD:32044029886249"
     },
     {
-      "id": "3613",
+      "id": "7f25",
       "name": "Hippopathology: a Systematic Treatise on the Disorders and Lameness of the Horse",
       "author": "William Percivall",
       "num_pages": 268,
@@ -157,7 +157,20 @@
       "ISBN": "MINN:31951D02060383X"
     },
     {
-      "id": "16aa",
+      "id": "64fe",
+      "name": "Man mortal: being a reply to Mr. F. W. Grant's “Life and Immortality,” etc",
+      "author": "Robert ROBERTS (Christadelphian.)",
+      "num_pages": 130,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=gzhD6yRJaqkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Uncategorized"
+      ],
+      "ISBN": "BL:A0022673926"
+    },
+    {
+      "id": "95d6",
       "name": "The Sacred Heart: a Correspondence Between ... Archbishop Manning, D.D., and the Rev. A. Nicholson, LL.D., as it Appeared in the “Guardian” Newspaper, Sept. 17th. With Notes for English Readers ... Second Edition",
       "author": "Henry Edward Manning",
       "num_pages": 40,
@@ -170,7 +183,7 @@
       "ISBN": "BL:A0022013016"
     },
     {
-      "id": "65be",
+      "id": "30ca",
       "name": "Lectures: Sicily. Genoa. A drive through the Engadine",
       "author": "John Lawson Stoddard",
       "num_pages": 350,
@@ -183,59 +196,7 @@
       "ISBN": "UCSD:31822041815861"
     },
     {
-      "id": "c029",
-      "name": "Jesus versus Christianity. By a Cantab",
-      "author": "CANTAB.",
-      "num_pages": 34,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=YM_21yyfPNUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "BL:A0022696523"
-    },
-    {
-      "id": "6b64",
-      "name": "The Christian Kingdom. A Sermon, Etc",
-      "author": "Henry James Coleridge",
-      "num_pages": 28,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=XHyvKN3qJ5wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "BL:A0021761125"
-    },
-    {
-      "id": "12f9",
-      "name": "The Wants and Means of India. A Paper, Etc",
-      "author": "Dadabhai Naoroji",
-      "num_pages": 12,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=gQo24ZEO67oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "BL:A0021869697"
-    },
-    {
-      "id": "7323",
-      "name": "A Shaker's Answer to the Oft-repeated Question, \"What Would Become of the World If All Should Become Shakers?\"",
-      "author": "Richard W. Pelham",
-      "num_pages": 36,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=XA1CN22onEgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Celibacy"
-      ],
-      "ISBN": "UOM:69015000001103"
-    },
-    {
-      "id": "3bb2",
+      "id": "e805",
       "name": "God or Baal: a sermon, etc",
       "author": "Joseph SLATER (Assistant Priest at the Church of Saint Lawrence Southampton.)",
       "num_pages": 14,
@@ -248,261 +209,87 @@
       "ISBN": "BL:A0021806083"
     },
     {
-      "id": "21ee",
-      "name": "A Defence of the Record of Revelation Agaisnt \"Christian Theology and Modern Scepticism.\".",
-      "author": "John Du Boulay",
+      "id": "0a22",
+      "name": "Jesus versus Christianity. By a Cantab",
+      "author": "CANTAB.",
+      "num_pages": 34,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=YM_21yyfPNUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Uncategorized"
+      ],
+      "ISBN": "BL:A0022696523"
+    },
+    {
+      "id": "27e6",
+      "name": "The Christian Kingdom. A Sermon, Etc",
+      "author": "Henry James Coleridge",
+      "num_pages": 28,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=XHyvKN3qJ5wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Uncategorized"
+      ],
+      "ISBN": "BL:A0021761125"
+    },
+    {
+      "id": "ba92",
+      "name": "The Wants and Means of India. A Paper, Etc",
+      "author": "Dadabhai Naoroji",
+      "num_pages": 12,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=gQo24ZEO67oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Uncategorized"
+      ],
+      "ISBN": "BL:A0021869697"
+    },
+    {
+      "id": "8e7a",
+      "name": "Morning and Evening Sacrifice: a handbook for domestic worship",
+      "author": "James Dickerson DAVIES",
+      "num_pages": 72,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=xbVE3PulfKkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Uncategorized"
+      ],
+      "ISBN": "BL:A0021939451"
+    },
+    {
+      "id": "422c",
+      "name": "A Shaker's Answer to the Oft-repeated Question, \"What Would Become of the World If All Should Become Shakers?\"",
+      "author": "Richard W. Pelham",
       "num_pages": 36,
       "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=GOUbAbq33q4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "http://books.google.com/books/content?id=XA1CN22onEgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
       "categories": [
-        "Uncategorized"
+        "Celibacy"
       ],
-      "ISBN": "BL:A0021970351"
-    },
-    {
-      "id": "8e73",
-      "name": "Catalogue of the Hebrew Manuscripts in the Bodleian Library and in the College Libraries of Oxford",
-      "author": "Bodleian Library",
-      "num_pages": 624,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=fpVOAQAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Judaism"
-      ],
-      "ISBN": "UIUC:30112084991048"
-    },
-    {
-      "id": "0afe",
-      "name": "Israel as a Pluralist State",
-      "author": "Unknown",
-      "num_pages": 112,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=UaIvAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Israelis"
-      ],
-      "ISBN": "STANFORD:36105132297347"
-    },
-    {
-      "id": "7ff0",
-      "name": "Leveler of the Path",
-      "author": "Sigmund Mannheimer",
-      "num_pages": 88,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=ERMfXg92pB4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Hebrew language"
-      ],
-      "ISBN": "NLI:2087706-10"
-    },
-    {
-      "id": "ca7e",
-      "name": "A Dictionary of Music and Musicians",
-      "author": "George Grove",
-      "num_pages": 784,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=5I_q52-HJCYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Music"
-      ],
-      "ISBN": "UCI:31970001387718"
-    },
-    {
-      "id": "efdf",
-      "name": "A manual of the mollusca",
-      "author": "S. P. Woodward",
-      "num_pages": 748,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=jwXctWt0uDIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "BSB:BSB11338997"
-    },
-    {
-      "id": "f00d",
-      "name": "A Miscellany of Literary Pieces from the Cambridge Genizah Collections",
-      "author": "Cambridge University Library",
-      "num_pages": 126,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=dk7gAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Education"
-      ],
-      "ISBN": "UOM:39015008928171"
-    },
-    {
-      "id": "0faf",
-      "name": "Catalogue of Hebrew Books in the British Museum Acquired During the Years 1868-1892",
-      "author": "British Museum. Department of Oriental Printed Books and Manuscripts",
-      "num_pages": 552,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=8EZDAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Hebrew imprints"
-      ],
-      "ISBN": "COLUMBIA:CU58806237"
-    },
-    {
-      "id": "9b53",
-      "name": "Libri ebraici a Mantova: Le edizioni del XVI secolo nella biblioteca della comunità ebraica",
-      "author": "Giulio Busi",
-      "num_pages": 316,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=fIBFAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Antiques & Collectibles"
-      ],
-      "ISBN": "STANFORD:36105021168849"
-    },
-    {
-      "id": "4887",
-      "name": "A bilingual concordance to the Targum of the Prophets",
-      "author": "Johannes Cornelis Moor",
-      "num_pages": 368,
-      "short_description": "Now updated with new material on AIDS and support groups, this “completely non-judgmental, very informative, and extremely effective book” (Library Journal)is a standard reference for parents of gays and lesbians.",
-      "image": "http://books.google.com/books/content?id=11wlAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Bibles"
-      ],
-      "ISBN": "STANFORD:36105110278483"
-    },
-    {
-      "id": "4954",
-      "name": "New York Magazine",
-      "author": "Unknown",
-      "num_pages": 140,
-      "short_description": "New York magazine was born in 1968 after a run as an insert of the New York Herald Tribune and quickly made a place for itself as the trusted resource for readers across the country. With award-winning writing and photography covering everything from politics and food to theater and fashion, the magazine's consistent mission has been to reflect back to its audience the energy and excitement of the city itself, while celebrating New York as both a place and an idea.",
-      "image": "http://books.google.com/books/content?id=a-UCAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "None"
-    },
-    {
-      "id": "26e0",
-      "name": "New York Magazine",
-      "author": "Unknown",
-      "num_pages": 168,
-      "short_description": "New York magazine was born in 1968 after a run as an insert of the New York Herald Tribune and quickly made a place for itself as the trusted resource for readers across the country. With award-winning writing and photography covering everything from politics and food to theater and fashion, the magazine's consistent mission has been to reflect back to its audience the energy and excitement of the city itself, while celebrating New York as both a place and an idea.",
-      "image": "http://books.google.com/books/content?id=A-ECAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "None"
-    },
-    {
-      "id": "caab",
-      "name": "Popular Mechanics",
-      "author": "Unknown",
-      "num_pages": 294,
-      "short_description": "Popular Mechanics inspires, instructs and influences readers to help them master the modern world. Whether it’s practical DIY home-improvement tips, gadgets and digital technology, information on the newest cars or the latest breakthroughs in science -- PM is the ultimate guide to our high-tech lifestyle.",
-      "image": "http://books.google.com/books/content?id=a-EDAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "None"
-    },
-    {
-      "id": "7fcc",
-      "name": "Floriculture: a book of reference for amateur and professional gardeners ... With ... coloured illustrations",
-      "author": "George M. F. GLENNY",
-      "num_pages": 138,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=WaHksPbL39AC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "BL:A0021974900"
-    },
-    {
-      "id": "0001",
-      "name": "A Library of the World's Best Literature",
-      "author": "Charles Dudley Warner",
-      "num_pages": 466,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=1VNhR53sAB0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Authors"
-      ],
-      "ISBN": "SRLF:D0007615933"
-    },
-    {
-      "id": "a6da",
-      "name": "Trade Circular and Publishers' Bulletin",
-      "author": "Unknown",
-      "num_pages": 482,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=iByD4vOB8AYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "American literature"
-      ],
-      "ISBN": "STANFORD:36105028010739"
-    },
-    {
-      "id": "cfdb",
-      "name": "A Century of Jewish Settlement in Western Canada",
-      "author": "Bet ha-tefutsot ʻal shem Naḥum Goldman",
-      "num_pages": 60,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=qb0JAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Art"
-      ],
-      "ISBN": "STANFORD:36105029463184"
-    },
-    {
-      "id": "a6f6",
-      "name": "Chambers's Journal of Popular Literature, Science and Arts",
-      "author": "Unknown",
-      "num_pages": 944,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=WwE8PFDfLBkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "WISC:89128089471"
-    },
-    {
-      "id": "5741",
-      "name": "Popular Mechanics",
-      "author": "Unknown",
-      "num_pages": 240,
-      "short_description": "Popular Mechanics inspires, instructs and influences readers to help them master the modern world. Whether it’s practical DIY home-improvement tips, gadgets and digital technology, information on the newest cars or the latest breakthroughs in science -- PM is the ultimate guide to our high-tech lifestyle.",
-      "image": "http://books.google.com/books/content?id=A-MDAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "None"
+      "ISBN": "UOM:69015000001103"
     }
   ],
   "history": [
     {
-      "id": "ca96",
-      "img": "http://books.google.com/books/content?id=MwQ7hekUD5AC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "book name": "A Key to the Pentateuch",
-      "ISBN": "NLI:2312570-10",
+      "id": "6782",
+      "image": "http://books.google.com/books/content?id=NCutNgYYpjgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "A Mosaic of Israel's Traditions",
+      "ISBN": "1932687564",
       "action": "Increment",
-      "date": "27/05/2024, 11:49"
+      "date": "27/05/2024, 13:14"
+    },
+    {
+      "id": "7a81",
+      "image": "http://books.google.com/books/content?id=NCutNgYYpjgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "A Mosaic of Israel's Traditions",
+      "ISBN": "1932687564",
+      "action": "Decrement",
+      "date": "27/05/2024, 13:15"
     }
   ]
 }

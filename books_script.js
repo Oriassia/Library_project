@@ -100,25 +100,6 @@ async function addToHistory(action, book){
   await axios.post("http://localhost:8001/history",postData)
 }
 
-
-async function showHistory(){
-  const historyData = await axios.get("http://localhost:8001/history")
-  for (const obj of historyData) {
-    document.querySelector(".history-table").innerHTML+=
-    `<tr>
-      <td>place</td>
-      <td><img src="${historyData.image}" alt=""></td>
-      <td>${historyData.bookName}</td>
-      <td>${historyData.ISBN}</td>
-      <td>${historyData.action}</td>
-      <td>${historyData.date}</td>
-    </tr>`
-  }
-  document.querySelector(".books-content").style.display = "none";
-  document.querySelector(".history-content").style.display = "block";
-}
-
-
 function deleteBook(id) {
   axios.delete(`${localLibraryUrl}/${id}`);
 }
