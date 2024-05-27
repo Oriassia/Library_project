@@ -51,17 +51,27 @@ function previousPage() {
 
 function showBookCard(book) {
   elementBookCard.innerHTML = "";
+  elementBookCard.innerHTML += 
+  `<div class="book-card-content-header">
+  <img src="${book.image}"></img>
 
-  elementBookCard.innerHTML += `<img src="${book.image}"></img>`;
-  elementBookCard.innerHTML += `<p id = ${book.id}><h3>ID:</h3> ${book.id}</p>`;
-  elementBookCard.innerHTML += `<p><h3>Name:</h3> ${book.name}</p>`;
-  elementBookCard.innerHTML += `<p> <h3>Author:</h3> ${book.author}</p>`;
-  elementBookCard.innerHTML += `<p><h3>Pages:</h3> ${book.num_pages}</p>`;
-  elementBookCard.innerHTML += `<p> <h3>Descriotion:</h3> ${book.short_description}</p>`;
-  elementBookCard.innerHTML += `<p><h3>Copies:</h3> ${book.num_copies}</p>`;
-  elementBookCard.innerHTML += `<p> <h3>Categories:</h3> ${book.categories}</p>`;
-  elementBookCard.innerHTML += `<p> <h3>ISBN:</h3> ${book.ISBN}</p>`;
-  elementBookCard.innerHTML += `<div class="book-card-buttons">
+  <div class="book-card-content-header-text">
+  <p id = ${book.id}><h3>ID:</h3> ${book.id}</p>
+  <p><h3>Name:</h3> ${book.name}</p>
+  </div> 
+
+  </div> 
+  <div class="book-card-content-body">
+  <p> <h3>Author:</h3> ${book.author}</p>
+  <p><h3>Pages:</h3> ${book.num_pages}</p>
+  <p> <h3>Description:</h3> ${book.short_description}</p>
+  <p><h3>Copies:</h3> ${book.num_copies}</p>
+  <p> <h3>Categories:</h3> ${book.categories}</p>
+  <p> <h3>ISBN:</h3> ${book.ISBN}</p>
+  </div> 
+
+  
+  <div class="book-card-buttons">
   <button class = "delete-button">Delete book</button>
   <button class = "Increment-button">Increment copies</button>
   <button class = "Decrement-button">Decrement copies</button>
@@ -140,24 +150,30 @@ async function fetchMultiplePages() {
   }
 
    for (const book of allBooks){
-    const volumeInfo = book.volumeInfo || {};
-    const postData = {
-    name: volumeInfo.title || "No Title",
-    author: volumeInfo.authors ? volumeInfo.authors[0] : "Unknown",
-    num_pages: volumeInfo.pageCount || 0,
-    short_description: volumeInfo.description || "No Description",
-    image:
-      (volumeInfo.imageLinks && volumeInfo.imageLinks.thumbnail) ||
-      "https://example.com/no-image.jpg",
-    num_copies: 5,
-    categories: volumeInfo.categories || ["Uncategorized"],
-    ISBN: volumeInfo.industryIdentifiers
-      ? volumeInfo.industryIdentifiers[0].identifier
-      : "None",
-  }
-      await axios.post(localLibraryUrl, postData);
+      const volumeInfo = book.volumeInfo || {};
+      const postData = {
+        name: volumeInfo.title || "No Title",
+        author: volumeInfo.authors ? volumeInfo.authors[0] : "Unknown",
+        num_pages: volumeInfo.pageCount || 0,
+        short_description: volumeInfo.description || "No Description",
+        image:
+          (volumeInfo.imageLinks && volumeInfo.imageLinks.thumbnail) ||
+          "https://example.com/no-image.jpg",
+        num_copies: 5,
+        categories: volumeInfo.categories || ["Uncategorized"],
+        ISBN: volumeInfo.industryIdentifiers
+          ? volumeInfo.industryIdentifiers[0].identifier
+          : "None",
+      }
+      addBookToData(postData);
    }   
 }
+
+async function addBookToData(postData){
+    await axios.post(localLibraryUrl, postData);
+}
+
+
 
 async function searchPerPage(substring, pageToStart, endOfSearch) {
   let holder = [];
