@@ -1,4 +1,4 @@
-const maxBooks = 40; // Maximum number of books to fetch
+const maxBooks = 100; // Maximum number of books to fetch
 
 async function postBooksData() {
   let totalBooks = 0;
