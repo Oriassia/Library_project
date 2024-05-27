@@ -59,10 +59,51 @@ function showBookCard(book) {
   const elemIncrementButton = document.querySelector(".Increment-button");
   const elemDecrementButton = document.querySelector(".Decrement-button");
 
-  elemDeleteButton.onclick = () => deleteBook(book.id);
-  elemIncrementButton.onclick = () => incrementBook(book.id, book.num_copies);
-  elemDecrementButton.onclick = () => decrementBook(book.id, book.num_copies);
+  elemDeleteButton.onclick = () => {
+    deleteBook(book.id);
+    addToHistory("delete", book);
+};
+
+elemIncrementButton.onclick = () => {
+    incrementBook(book.id, book.num_copies);
+    addToHistory("Increment", book);
+};
+
+elemDecrementButton.onclick = () => {
+    decrementBook(book.id, book.num_copies);
+    addToHistory("Decrement", book);
+};
 }
+
+async function addToHistory(action, book){
+  const postData = {
+    "image":book.image,
+    "bookName": book.name,
+    "ISBN": book.ISBN,
+    "action": action,
+    "date": getCurrentDateTime()
+  }
+  await axios.post("http://localhost:8001/history",postData)
+}
+
+
+async function showHistory(){
+  const historyData = await axios.get("http://localhost:8001/history")
+  for (const obj of historyData) {
+    document.querySelector(".history-table").innerHTML+=
+    `<tr>
+      <td>place</td>
+      <td><img src="${historyData.image}" alt=""></td>
+      <td>${historyData.bookName}</td>
+      <td>${historyData.ISBN}</td>
+      <td>${historyData.action}</td>
+      <td>${historyData.date}</td>
+    </tr>`
+  }
+  document.querySelector(".books-content").style.display = "none";
+  document.querySelector(".history-content").style.display = "block";
+}
+
 
 function deleteBook(id) {
   axios.delete(`${localLibraryUrl}/${id}`);
@@ -121,4 +162,15 @@ async function fetchMultiplePages() {
   }
       await axios.post(localLibraryUrl, postData);
    }   
+}
+
+
+function getCurrentDateTime() {
+  const now = new Date();
+  const day = String(now.getDate()).padStart(2, '0');
+  const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+  const year = now.getFullYear();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  return `${day}/${month}/${year}, ${hours}:${minutes}`;
 }
