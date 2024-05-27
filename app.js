@@ -75,16 +75,14 @@ function decrementBook(id, copies) {
   axios.patch(`${localLibraryUrl}/${id}`, { num_copies: copies - 1 });
 }
 
-
-
-
-
-async function fetchBooks(startIndex = 0, maxResults = 10) {
+// fetch books from google API
+async function fetchBooks(startIndex, maxResultsNum) {
   const params = {
       q: "a",
       key: 'AIzaSyAj03UVAQuKO-sABUxmqOPr8gMxJrna9TQ',
-      maxResults: maxResults,
-      startIndex: startIndex
+      maxResults: maxResultsNum,
+      startIndex: startIndex,
+      langRestrict: 'en'
   };
 
   try {
@@ -96,12 +94,12 @@ async function fetchBooks(startIndex = 0, maxResults = 10) {
   }
 }
 
-
 async function fetchMultiplePages() {
   let allBooks = [];
+  const maxResultsNum = 40;
   for (let page = 0; page < 1; page++) {
-      const startIndex = page * 10; // Assuming 40 results per page
-      const books = await fetchBooks(startIndex);
+      const startIndex = page * maxResultsNum; 
+      const books = await fetchBooks(startIndex, maxResultsNum);
       allBooks = allBooks.concat(books);
   }
 
@@ -124,140 +122,3 @@ async function fetchMultiplePages() {
       await axios.post(localLibraryUrl, postData);
    }   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-async function postFirstBooks() {
-  let booksCounter = 0;
-  let startIndex = 0;
-
-  while (booksCounter < 100) {
-    const items = await fetchBooks(startIndex);
-    if (!items || items.length === 0) {
-      break;
-    }
-    for (const item of items) {
-      const volumeInfo = item.volumeInfo || {};
-      await axios.post(localLibraryUrl, {
-        name: volumeInfo.title || "No Title",
-        author: volumeInfo.authors ? volumeInfo.authors[0] : "Unknown",
-        num_pages: volumeInfo.pageCount || 0,
-        short_description: volumeInfo.description || "No Description",
-        image:
-          (volumeInfo.imageLinks && volumeInfo.imageLinks.thumbnail) ||
-          "https://example.com/no-image.jpg",
-        num_copies: 5,
-        categories: volumeInfo.categories || ["Uncategorized"],
-        ISBN: volumeInfo.industryIdentifiers
-          ? volumeInfo.industryIdentifiers[0].identifier
-          : "None",
-      });
-      booksCounter++;
-      if (booksCounter >= 100) {
-        break;
-      }
-    }
-    startIndex += 40; // Move to the next set of books
-  }
-}
-
-
-
-
-
-
-const inputField = document.getElementById("input");
-const btnSearch = document.getElementById("search");
-const url = "http://localhost:8001/books";
-const apiKey = 'AIzaSyCTA9wuo8lvoUDxqDt_WYsebCsbSYoHoUY';
-
-btnSearch.addEventListener("click", async () => {
-    for (let page = 0; page < 10; page++) {
-        await getBookToAdd('https://www.googleapis.com/books/v1/volumes', {
-            key: apiKey,
-            startIndex: page,
-            maxResults: 40,
-            q: inputField.value,
-            langRestrict: 'en'
-        });
-    }
-});
-
-async function getBookToAdd(apiUrl, params) {
-    try {
-        const response = await axios.get(apiUrl, { params });
-        const books = response.data.items;
-        for (const book of books) {
-            if (book.volumeInfo.language.toLowerCase() === "en") {
-                const bookDetails = book.volumeInfo;
-                await addBookToData(bookDetails); // Ensure each book is processed before moving to the next
-            }
-        }
-    } catch (error) {
-        console.error('Error fetching books:', error);
-    }
-}
-
-async function addBookToData(element) {
-    try {
-        const exists = await check_if_exists(element.title); // boolean
-        if (exists) {
-            // console.log("Duplicate book:", element.title);
-        } else {
-            const elementToPush = {
-                "title": element.title,
-                "authors": element.authors,
-                "numPages": element.pageCount,
-                "description": element.description,
-                "imageLink": {
-                    small: element.imageLinks.smallThumbnail,
-                    big: element.imageLinks.thumbnail
-                },
-                "categories": [element.categories],
-                "ISBN": element.industryIdentifiers
-            };
-            const res = await axios.post(url, elementToPush);
-            console.log('Book added:', res.data);
-        }
-    } catch (error) {
-        console.error('Error adding book:', error);
-    }
-}
-
-async function check_if_exists(title) {
-    try {
-        const response = await axios.get(url);
-        const myBooks = response.data;
-        for (const book of myBooks) {
-            if (book.title.toLowerCase() === title.toLowerCase()) {
-                return true;
-            }
-        }
-        return false;
-    } catch (error) {
-        throw error;
-    }
-}
-
-async function displayMyBooks(){
-    try {
-        const respnse = await axios.get(url);
-        const myBooks = respnse.data;
-        console.log(myBooks);
-    } catch (error) {
-        console.log(error);
-    }
-}
-displayMyBooks();
