@@ -64,34 +64,33 @@
       <div class="background"></div>
       <img src="" alt="" />
       <div class="add-book-content">
-        <form action="submit" class="add-book-form">
+        <form onsubmit="createNewBook(event)" class="add-book-form">
           <label for="name">Book Name:</label>
           <input id="name" type="text" required />
 
           <label for="author">Author:</label>
-          <input id="author" type="text" required />
+          <input id="author" type="text" />
 
           <label for="num_pages">Number of Pages:</label>
-          <input id="num_pages" type="number" required />
+          <input id="num_pages" type="number" />
 
           <label for="short_description">Short Description:</label>
           <textarea
             id="short_description"
-            required
             oninput="adjustHeight(this)"
           ></textarea>
 
           <label for="image-link">Image Link:</label>
-          <input id="image-link" type="text" required />
+          <input id="image-link" type="text" />
 
           <label for="num_copies">Number of Copies:</label>
           <input id="num_copies" type="text" required />
 
           <label for="categories">Categories:</label>
-          <input id="categories" type="text" required />
+          <input id="categories" type="text" />
 
           <label for="ISBN">ISBN:</label>
-          <input id="ISBN" type="text" required />
+          <input id="ISBN" type="text" />
 
           <button type="submit">Add book</button>
         </form>
@@ -114,8 +113,38 @@
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/books_script.js"></script>
     <script>
+      const localLibraryUrl = "http://localhost:8001/books";
+
+      const form = document.querySelector(".add-book-form");
+      const bookNameInput = document.querySelector("#name");
+      const authorInput = document.querySelector("#author");
+      const numPagesInput = document.querySelector("#num_pages");
+      const shortDescriptionTextarea =
+        document.querySelector("#short_description");
+      const imageLinkInput = document.querySelector("#image-link");
+      const numCopiesInput = document.querySelector("#num_copies");
+      const categoriesInput = document.querySelector("#categories");
+      const isbnInput = document.querySelector("#ISBN");
+
+      async function createNewBook(event) {
+        event.preventDefault(); // Prevent form from submitting normally
+        const postData = {
+          name: bookNameInput.value || "No Title",
+          author: authorInput.value || "Unknown",
+          num_pages: numPagesInput.value || 0,
+          short_description: shortDescriptionTextarea.value || "No Description",
+          image: imageLinkInput.value || "https://example.com/no-image.jpg",
+          num_copies: numCopiesInput.value,
+          categories: categoriesInput.value || ["Uncategorized"],
+          ISBN: isbnInput.value || "None",
+        };
+        await axios.post(localLibraryUrl, postData);
+      }
+
+      // async function addBookToData(postData) {
+      // }
+
       function adjustHeight(element) {
         element.style.height = "auto";
         element.style.height =
