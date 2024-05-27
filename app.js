@@ -5,12 +5,17 @@ const elementBooksList = document.querySelector(".books-list");
 const elementBookCard = document.querySelector(".book-card");
 
 let next = 1;
+let previous;
 
 showBookByPage(next);
-async function showBookByPage(next) {
+
+async function showBookByPage(pageNum) {
   elementBooksList.innerHTML = "";
-  const response = await axios.get(`${localLibraryUrl}?_page=${next}`);
+  const response = await axios.get(`${localLibraryUrl}?_page=${pageNum}`);
   const booksArray = response.data.data;
+  console.log(response.data);
+  next = response.data.next;
+  previous = response.data.prev;
   for (const book of booksArray) {
     elementBooksList.innerHTML += `<li>${book.name}</li>`;
   }
@@ -23,15 +28,11 @@ async function showBookByPage(next) {
 }
 
 function nextPage() {
-  next++;
-  showBookByPage(next);
+  if (next !== null) showBookByPage(next);
 }
 
 function previousPage() {
-  if (next > 1) {
-    next--;
-  }
-  showBookByPage(next);
+  if (previous !== null) showBookByPage(previous);
 }
 
 function showBookCard(book) {
