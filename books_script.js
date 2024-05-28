@@ -282,46 +282,4 @@ async function searchByInputTest() {
   if (currentBooksArray.length > 0) {
     totalBooksArray.push(currentBooksArray);
   }
-//   if (currentInputValue !== inputValue) {
-//     currentInputValue = inputValue;
-//     currentArrayIndex = 0;
-//     searchPageNum = 1;
-//     totalBooksArray = [];
-//   } else if (action === "prev" && currentArrayIndex > 1) {
-//     printList(totalBooksArray[currentArrayIndex - 2]);
-//     currentArrayIndex--;
-//     return;
-//   }
 
-//   const initialResponse = await axios.get(`${localLibraryUrl}?_page=1`);
-//   const totalSearchPages = initialResponse.data.pages;
-
-//   while (searchPageNum <= totalPages) {
-//     if (!totalBooksArray[currentArrayIndex]){
-//       totalBooksArray.push([]); // new last item
-//     }
-
-//     const response = await axios.get(`${localLibraryUrl}?_page=${searchPageNum}`);
-//     const booksPage = response.data.data;
-//     searchPageNum++;
-
-//     for (let book of booksPage) {
-//       if (book.name.includes(inputValue)) {
-//         if (totalBooksArray[currentArrayIndex].length < 10) {
-//           totalBooksArray[currentArrayIndex].push(book);
-//         } else {
-//           if (totalBooksArray.length - 1 === currentArrayIndex) {
-//             totalBooksArray.push([]); // new last item
-//           }
-//           totalBooksArray[++currentArrayIndex].push(book);
-//         }
-//       }
-//     }
-
-//     if (totalBooksArray[currentArrayIndex].length === 10) {
-//       break;
-//     }
-//   }
-//   printList(totalBooksArray[currentArrayIndex]);
-//   currentArrayIndex++
-// }
