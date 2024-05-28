@@ -57,13 +57,15 @@ svg {
 }
 
 .books-list-container {
-  max-width: 600px;
+  width: 850px;
 }
 ul {
   /* padding-left: 0; */
 }
 .books-content li {
   /* margin: 15px; */
+  font-size: 18px;
+  font-weight: 600;
   list-style: none;
   padding: 20px;
   border: solid 1px black;
