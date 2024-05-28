@@ -37,11 +37,11 @@ function adjustHeight(element) {
 
 function addBookFromGoogle() {}
 
-const elementInputValue = document.querySelector(".search-book-from-google-input");
+const elementInputValue = document.querySelector(
+  ".search-book-from-google-input"
+);
 const elementSelect = document.querySelector("#add-book");
 const elementCard = document.querySelector(".add-book-card");
-
-
 
 async function searchBookFromGoogle() {
   let response;
@@ -65,6 +65,11 @@ function printList(array) {
           <div>
           <p><h3>Name:</h3> ${book.volumeInfo.title}</p>
           <p><h3>Author:</h3> ${book.volumeInfo.authors}</p>
+          <p><h3>ISBN:</h3> ${
+            book.volumeInfo.industryIdentifiers
+              ? book.volumeInfo.industryIdentifiers[0].identifier
+              : "None"
+          }</p>
           </div>
           <button class = "add-book-button">Add Book</button>
         </div>`;
