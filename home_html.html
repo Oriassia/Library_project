@@ -68,11 +68,11 @@
       <img src="" alt="" />
       <div class="books-content">
         <div class="books-list-container">
-          <div class="books-list-container-header">books:</div>
-          <ul class="books-list"></ul>
+          <div class="books-list-container-header"></div>
+          <ol class="books-list"></ol>
           <div class="next-previous">
-            <button onclick="previousPage()">Previous</button>
-            <button onclick="nextPage()">Next</button>
+            <button class="prev" onclick="previousPage()">Previous</button>
+            <button class="next" onclick="nextPage()">Next</button>
           </div>
           <div style="display: none" class="next-previous-search">
             <button onclick="searchPageToggle(`previous`)">Previous</button>
@@ -94,5 +94,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/books_script.js"></script>
+    <script src="search.js"></script>
   </body>
 </html>

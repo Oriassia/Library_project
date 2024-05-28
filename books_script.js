@@ -1,6 +1,6 @@
-let worldLibraryUrl =
-  "https://www.googleapis.com/books/v1/volumes";
+let worldLibraryUrl = "https://www.googleapis.com/books/v1/volumes";
 let localLibraryUrl = "http://localhost:8001/books";
+let searchUrl = "http://localhost:8001/search";
 
 const elementBooksList = document.querySelector(".books-list");
 const elementBookCard = document.querySelector(".book-card");
@@ -9,7 +9,6 @@ let filterArray = [];
 let next = 1;
 let previous;
 let totalPages;
-let pageToStart = next;
 
 inIt();
 function inIt() {
@@ -30,7 +29,13 @@ async function showBookByPage(pageNum) {
 function printList(array) {
   elementBooksList.innerHTML = "";
   for (const book of array) {
-    elementBooksList.innerHTML += `<li>${book.name}</li>`;
+    elementBooksList.innerHTML += `<li>
+    <img class = "shadow"  src="${book.image}" alt="">
+    <div>
+    <p><h3>Name:</h3> ${book.name}</p>
+    <p><h3>Author:</h3> ${book.author}</p>
+    </div>
+    </li>`;
   }
   const liNodeList = document.querySelectorAll("li");
 
@@ -49,33 +54,30 @@ function previousPage() {
 
 function showBookCard(book) {
   elementBookCard.innerHTML = "";
-  elementBookCard.innerHTML += 
-  `<div class="book-card-content-header">
-  <img src="${book.image}"></img>
-
-  <div class="book-card-content-header-text">
-  <p id = ${book.id}><h3>ID:</h3> ${book.id}</p>
-  <p><h3>Name:</h3> ${book.name}</p>
-  </div> 
-
-  </div> 
-  <div class="book-card-content-body">
-  <p> <h3>Author:</h3> ${book.author}</p>
-  <p><h3>Pages:</h3> ${book.num_pages}</p>
-  <p> <h3>Description:</h3> ${book.short_description}</p>
-  <p><h3>Copies:</h3> ${book.num_copies}</p>
-  <p> <h3>Categories:</h3> ${book.categories}</p>
-  <p> <h3>ISBN:</h3> ${book.ISBN}</p>
-  </div> 
+  elementBookCard.innerHTML += `
+  <div><img class = "shadow"  src="${book.image}"></img></div>
 
   
-  <div class="book-card-buttons">
+  <div> <p id = ${book.id}><h3>ID:</h3> ${book.id}</p></div>
+  <div><p><h3>Name:</h3> ${book.name}</p></div>
+  
+
+   
+  
+  <div><p> <h3>Author:</h3> ${book.author}</p></div>
+  <div> <p><h3>Pages:</h3> ${book.num_pages}</p></div>
+  <div><p> <h3>Description:</h3> ${book.short_description}</p></div>
+  <div> <p><h3>Copies:</h3> ${book.num_copies}</p></div>
+  <div><p> <h3>Categories:</h3> ${book.categories}</p></div>
+  <div><p> <h3>ISBN:</h3> ${book.ISBN}</p></div>
+  
+
+  
+  <div>
   <button class = "delete-button">Delete book</button>
   <button class = "Increment-button">Increment copies</button>
   <button class = "Decrement-button">Decrement copies</button>
-  </div>`
-
-  
+  </div>`;
 
   const elemDeleteButton = document.querySelector(".delete-button");
   const elemIncrementButton = document.querySelector(".Increment-button");
@@ -84,28 +86,28 @@ function showBookCard(book) {
   elemDeleteButton.onclick = () => {
     deleteBook(book.id);
     addToHistory("delete", book);
-};
+  };
 
-elemIncrementButton.onclick = () => {
+  elemIncrementButton.onclick = () => {
     incrementBook(book.id, book.num_copies);
     addToHistory("Increment", book);
-};
+  };
 
-elemDecrementButton.onclick = () => {
+  elemDecrementButton.onclick = () => {
     decrementBook(book.id, book.num_copies);
     addToHistory("Decrement", book);
-};
+  };
 }
 
-async function addToHistory(action, book){
+async function addToHistory(action, book) {
   const postData = {
-    "image":book.image,
-    "bookName": book.name,
-    "ISBN": book.ISBN,
-    "action": action,
-    "date": getCurrentDateTime()
-  }
-  await axios.post("http://localhost:8001/history",postData)
+    image: book.image,
+    bookName: book.name,
+    ISBN: book.ISBN,
+    action: action,
+    date: getCurrentDateTime(),
+  };
+  await axios.post("http://localhost:8001/history", postData);
 }
 
 function deleteBook(id) {
@@ -122,19 +124,19 @@ function decrementBook(id, copies) {
 // fetch books from google API
 async function fetchBooks(startIndex, maxResultsNum) {
   const params = {
-      q: "a",
-      key: 'AIzaSyAj03UVAQuKO-sABUxmqOPr8gMxJrna9TQ',
-      maxResults: maxResultsNum,
-      startIndex: startIndex,
-      langRestrict: 'en'
+    q: "a",
+    key: "AIzaSyAj03UVAQuKO-sABUxmqOPr8gMxJrna9TQ",
+    maxResults: maxResultsNum,
+    startIndex: startIndex,
+    langRestrict: "en",
   };
 
   try {
-      const response = await axios.get(worldLibraryUrl, { params });
-      return response.data.items;
+    const response = await axios.get(worldLibraryUrl, { params });
+    return response.data.items;
   } catch (error) {
-      console.error('Error fetching books:', error);
-      return [];
+    console.error("Error fetching books:", error);
+    return [];
   }
 }
 
@@ -142,42 +144,42 @@ async function fetchMultiplePages() {
   let allBooks = [];
   const maxResultsNum = 40;
   for (let page = 0; page < 1; page++) {
-      const startIndex = page * maxResultsNum; 
-      const books = await fetchBooks(startIndex, maxResultsNum);
-      allBooks = allBooks.concat(books);
+    const startIndex = page * maxResultsNum;
+    const books = await fetchBooks(startIndex, maxResultsNum);
+    allBooks = allBooks.concat(books);
   }
 
-   for (const book of allBooks){
-      const volumeInfo = book.volumeInfo || {};
-      const postData = {
-        name: volumeInfo.title || "No Title",
-        author: volumeInfo.authors ? volumeInfo.authors[0] : "Unknown",
-        num_pages: volumeInfo.pageCount || 0,
-        short_description: volumeInfo.description || "No Description",
-        image:
-          (volumeInfo.imageLinks && volumeInfo.imageLinks.thumbnail) ||
-          "https://example.com/no-image.jpg",
-        num_copies: 5,
-        categories: volumeInfo.categories || ["Uncategorized"],
-        ISBN: volumeInfo.industryIdentifiers
-          ? volumeInfo.industryIdentifiers[0].identifier
-          : "None",
-      }
-      addBookToData(postData);
-   }   
+  for (const book of allBooks) {
+    const volumeInfo = book.volumeInfo || {};
+    const postData = {
+      name: volumeInfo.title || "No Title",
+      author: volumeInfo.authors ? volumeInfo.authors[0] : "Unknown",
+      num_pages: volumeInfo.pageCount || 0,
+      short_description: volumeInfo.description || "No Description",
+      image:
+        (volumeInfo.imageLinks && volumeInfo.imageLinks.thumbnail) ||
+        "https://example.com/no-image.jpg",
+      num_copies: 5,
+      categories: volumeInfo.categories || ["Uncategorized"],
+      ISBN: volumeInfo.industryIdentifiers
+        ? volumeInfo.industryIdentifiers[0].identifier
+        : "None",
+    };
+    addBookToData(postData);
+  }
 }
 
-async function addBookToData(postData){
-    await axios.post(localLibraryUrl, postData);
+async function addBookToData(postData) {
+  await axios.post(localLibraryUrl, postData);
 }
 
 function getCurrentDateTime() {
   const now = new Date();
-  const day = String(now.getDate()).padStart(2, '0');
-  const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+  const day = String(now.getDate()).padStart(2, "0");
+  const month = String(now.getMonth() + 1).padStart(2, "0"); // Months are 0-based
   const year = now.getFullYear();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
   return `${day}/${month}/${year}, ${hours}:${minutes}`;
 }
 
@@ -229,17 +231,6 @@ function searchPageToggle(action) {
     printSearchList(currentArrayIndex);
   }
 }
-
-
-function printSearchList(index) {
-  if (!totalBooksArray[index]) {
-    searchByInputTest().then(() => {
-      printSearchList(index);
-    });
-  } else {
-    elementBooksList.innerHTML = "";
-    for (const book of totalBooksArray[index]) {
-      elementBooksList.innerHTML += `<li>${book.name}</li>`;
     }
     const liNodeList = document.querySelectorAll("li");
 
@@ -269,7 +260,6 @@ async function searchByInputTest() {
   const booksPage = initialResponse.data.data;
   searchPageIndex++;
 
-
     for (let book of booksPage) {
       if (book.name.includes(inputValue)) {
         if (currentBooksArray.length < 10) {
@@ -292,20 +282,6 @@ async function searchByInputTest() {
   if (currentBooksArray.length > 0) {
     totalBooksArray.push(currentBooksArray);
   }
-currentBooksArray = []
-}
-
-
-
-
-
-
-
-
-
-
-
-
 //   if (currentInputValue !== inputValue) {
 //     currentInputValue = inputValue;
 //     currentArrayIndex = 0;
