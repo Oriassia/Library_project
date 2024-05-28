@@ -183,7 +183,6 @@ function getCurrentDateTime() {
   return `${day}/${month}/${year}, ${hours}:${minutes}`;
 }
 
-
 function buttonsToggle() {
   const nextPrevious = document.querySelector(".next-previous");
   const nextPreviousSearch = document.querySelector(".next-previous-search");
@@ -230,17 +229,14 @@ function searchPageToggle(action) {
     }
     printSearchList(currentArrayIndex);
   }
-}
-    }
-    const liNodeList = document.querySelectorAll("li");
 
-    liNodeList.forEach((li, i) => {
-      li.onclick = () => showBookCard(totalBooksArray[index][i]);
-    });
-  }
+  const liNodeList = document.querySelectorAll("li");
+
+  liNodeList.forEach((li, i) => {
+    li.onclick = () => showBookCard(totalBooksArray[index][i]);
+  });
 }
 
-  
 async function searchByInputTest() {
   buttonsToggle();
 
@@ -252,34 +248,35 @@ async function searchByInputTest() {
     totalBooksArray = [];
     currentBooksArray = [];
     currentArrayIndex = 0;
-  } 
-  
-  while(searchPageIndex <= totalSearchPages){
-  const initialResponse = await axios.get(`${localLibraryUrl}?_page=${searchPageIndex}`);
-  totalSearchPages = initialResponse.data.pages;
-  const booksPage = initialResponse.data.data;
-  searchPageIndex++;
+  }
+
+  while (searchPageIndex <= totalSearchPages) {
+    const initialResponse = await axios.get(
+      `${localLibraryUrl}?_page=${searchPageIndex}`
+    );
+    totalSearchPages = initialResponse.data.pages;
+    const booksPage = initialResponse.data.data;
+    searchPageIndex++;
 
     for (let book of booksPage) {
       if (book.name.includes(inputValue)) {
         if (currentBooksArray.length < 10) {
           currentBooksArray.push(book);
         } else {
-          totalBooksArray.push(currentBooksArray)
-          currentBooksArray = [book]
+          totalBooksArray.push(currentBooksArray);
+          currentBooksArray = [book];
         }
       }
     }
 
-    if(totalBooksArray[currentArrayIndex]){
-      if(totalBooksArray[currentArrayIndex].length == 10){
-      break;
+    if (totalBooksArray[currentArrayIndex]) {
+      if (totalBooksArray[currentArrayIndex].length == 10) {
+        break;
+      }
     }
-    }
-    
   }
 
   if (currentBooksArray.length > 0) {
     totalBooksArray.push(currentBooksArray);
   }
-
+}
