@@ -4,7 +4,6 @@ let localLibraryUrl = "http://localhost:8001/books";
 
 const elementBooksList = document.querySelector(".books-list");
 const elementBookCard = document.querySelector(".book-card");
-// const elemetSearchButton = document.querySelector(".fa-magnifying-glass");
 
 let filterArray = [];
 let next = 1;
@@ -15,13 +14,12 @@ let pageToStart = next;
 inIt();
 function inIt() {
   showBookByPage(next);
-  // elemetSearchButton.addEventListener("click", );
 }
 
 async function showBookByPage(pageNum) {
   const response = await axios.get(`${localLibraryUrl}?_page=${pageNum}`);
   const booksArray = response.data.data;
-  console.log(response.data);
+  console.log(response.data.data);
   next = response.data.next;
   previous = response.data.prev;
   totalPages = response.data.pages;
@@ -183,60 +181,6 @@ function getCurrentDateTime() {
   return `${day}/${month}/${year}, ${hours}:${minutes}`;
 }
 
-let currentInputValue = null;
-let currentArrayIndex = 0;
-let searchPageNum = 1;
-let filteredBooksArrays = [[]];
-
-async function searchByInput(action) {
-  buttonsToggle();
-
-  const inputValue = document.querySelector(".search-bar-input").value;
-
-  if (currentInputValue !== inputValue) {
-    currentInputValue = inputValue;
-    currentArrayIndex = 0;
-    searchPageNum = 1;
-    filteredBooksArrays = [];
-  } else if (action === "prev" && currentArrayIndex > 1) {
-    printList(filteredBooksArrays[currentArrayIndex - 2]);
-    currentArrayIndex--;
-    return;
-  }
-
-  const initialResponse = await axios.get(`${localLibraryUrl}?_page=1`);
-  const totalPages = initialResponse.data.pages;
-
-  while (searchPageNum <= totalPages) {
-    if (!filteredBooksArrays[currentArrayIndex]){
-      filteredBooksArrays.push([]); // new last item
-    }
-
-    const response = await axios.get(`${localLibraryUrl}?_page=${searchPageNum}`);
-    const booksPage = response.data.data;
-    searchPageNum++;
-
-    for (let book of booksPage) {
-      if (book.name.includes(inputValue)) {
-        if (filteredBooksArrays[currentArrayIndex].length < 10) {
-          filteredBooksArrays[currentArrayIndex].push(book);
-        } else {
-          if (filteredBooksArrays.length - 1 === currentArrayIndex) {
-            filteredBooksArrays.push([]); // new last item
-          }
-          filteredBooksArrays[++currentArrayIndex].push(book);
-        }
-      }
-    }
-
-    if (filteredBooksArrays[currentArrayIndex].length === 10) {
-      break;
-    }
-  }
-  printList(filteredBooksArrays[currentArrayIndex]);
-  currentArrayIndex++
-}
-
 
 function buttonsToggle() {
   const nextPrevious = document.querySelector(".next-previous");
@@ -250,31 +194,158 @@ function buttonsToggle() {
     nextPreviousSearch.style.display = "block";
   }
 }
+let currentInputValue = null;
+let currentArrayIndex = 0;
+let searchPageIndex = 1;
+let totalBooksArray = [];
+let currentBooksArray = [];
+let totalSearchPages = 1;
 
+function searchPageToggle(action) {
+  if (totalBooksArray.length === 0) {
+    console.log("yessssssssss");
+    currentArrayIndex = 0;
+    printSearchList(currentArrayIndex);
+  } else {
+    switch (action) {
+      case "previous":
+        if (currentArrayIndex >= 1) {
+          currentArrayIndex--;
+        }
+        break;
 
-async function searchByInputTest() {
-  const inputValue = document.querySelector(".search-bar-input").value;
-  let searchPageNum = 1;  // Initialize the search page number
-
-  const response = await axios.get(`${localLibraryUrl}?_page=1`);
-  const totalPages = response.data.pages;
-  console.log(totalPages);
-  while (searchPageNum <= totalPages) {
-    const response = await axios.get(`${localLibraryUrl}?_page=${searchPageNum}`);
-    const booksPage = response.data.data;
-    searchPageNum++;
-
-    if (booksPage.length === 0) {
-      // If no more books are fetched, break the loop
-      break;
+      default:
+        if (!totalBooksArray[currentArrayIndex + 1]) {
+          searchByInputTest().then(() => {
+            currentArrayIndex++;
+            printSearchList(currentArrayIndex);
+          });
+        } else {
+          currentArrayIndex++;
+          printSearchList(currentArrayIndex);
+        }
+        break;
     }
-
-    for (let book of booksPage) {
-      let bookName = book.name
-      if (bookName.includes(inputValue)) {
-        console.log(bookName);
-        console.log(inputValue);
-      }
-    }
+    printSearchList(currentArrayIndex);
   }
 }
+
+
+function printSearchList(index) {
+  if (!totalBooksArray[index]) {
+    searchByInputTest().then(() => {
+      printSearchList(index);
+    });
+  } else {
+    elementBooksList.innerHTML = "";
+    for (const book of totalBooksArray[index]) {
+      elementBooksList.innerHTML += `<li>${book.name}</li>`;
+    }
+    const liNodeList = document.querySelectorAll("li");
+
+    liNodeList.forEach((li, i) => {
+      li.onclick = () => showBookCard(totalBooksArray[index][i]);
+    });
+  }
+}
+
+  
+async function searchByInputTest() {
+  buttonsToggle();
+
+  const inputValue = document.querySelector(".search-bar-input").value;
+  if (inputValue !== currentInputValue) {
+    // Reset if input value has changed
+    currentInputValue = inputValue;
+    searchPageIndex = 1;
+    totalBooksArray = [];
+    currentBooksArray = [];
+    currentArrayIndex = 0;
+  } 
+  
+  while(searchPageIndex <= totalSearchPages){
+  const initialResponse = await axios.get(`${localLibraryUrl}?_page=${searchPageIndex}`);
+  totalSearchPages = initialResponse.data.pages;
+  const booksPage = initialResponse.data.data;
+  searchPageIndex++;
+
+
+    for (let book of booksPage) {
+      if (book.name.includes(inputValue)) {
+        if (currentBooksArray.length < 10) {
+          currentBooksArray.push(book);
+        } else {
+          totalBooksArray.push(currentBooksArray)
+          currentBooksArray = [book]
+        }
+      }
+    }
+
+    if(totalBooksArray[currentArrayIndex]){
+      if(totalBooksArray[currentArrayIndex].length == 10){
+      break;
+    }
+    }
+    
+  }
+
+  if (currentBooksArray.length > 0) {
+    totalBooksArray.push(currentBooksArray);
+  }
+currentBooksArray = []
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//   if (currentInputValue !== inputValue) {
+//     currentInputValue = inputValue;
+//     currentArrayIndex = 0;
+//     searchPageNum = 1;
+//     totalBooksArray = [];
+//   } else if (action === "prev" && currentArrayIndex > 1) {
+//     printList(totalBooksArray[currentArrayIndex - 2]);
+//     currentArrayIndex--;
+//     return;
+//   }
+
+//   const initialResponse = await axios.get(`${localLibraryUrl}?_page=1`);
+//   const totalSearchPages = initialResponse.data.pages;
+
+//   while (searchPageNum <= totalPages) {
+//     if (!totalBooksArray[currentArrayIndex]){
+//       totalBooksArray.push([]); // new last item
+//     }
+
+//     const response = await axios.get(`${localLibraryUrl}?_page=${searchPageNum}`);
+//     const booksPage = response.data.data;
+//     searchPageNum++;
+
+//     for (let book of booksPage) {
+//       if (book.name.includes(inputValue)) {
+//         if (totalBooksArray[currentArrayIndex].length < 10) {
+//           totalBooksArray[currentArrayIndex].push(book);
+//         } else {
+//           if (totalBooksArray.length - 1 === currentArrayIndex) {
+//             totalBooksArray.push([]); // new last item
+//           }
+//           totalBooksArray[++currentArrayIndex].push(book);
+//         }
+//       }
+//     }
+
+//     if (totalBooksArray[currentArrayIndex].length === 10) {
+//       break;
+//     }
+//   }
+//   printList(totalBooksArray[currentArrayIndex]);
+//   currentArrayIndex++
+// }
