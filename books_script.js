@@ -1,16 +1,16 @@
-let worldLibraryUrl =
-  "https://www.googleapis.com/books/v1/volumes";
+let worldLibraryUrl = "https://www.googleapis.com/books/v1/volumes";
 let localLibraryUrl = "http://localhost:8001/books";
+let searchUrl = "http://localhost:8001/search";
 
 const elementBooksList = document.querySelector(".books-list");
 const elementBookCard = document.querySelector(".book-card");
 const elemetSearchButton = document.querySelector(".fa-magnifying-glass");
 
-let filterArray = [];
+
+
 let next = 1;
 let previous;
 let totalPages;
-let pageToStart = next;
 
 inIt();
 function inIt() {
@@ -51,8 +51,7 @@ function previousPage() {
 
 function showBookCard(book) {
   elementBookCard.innerHTML = "";
-  elementBookCard.innerHTML += 
-  `<div class="book-card-content-header">
+  elementBookCard.innerHTML += `<div class="book-card-content-header">
   <img src="${book.image}"></img>
 
   <div class="book-card-content-header-text">
@@ -75,9 +74,7 @@ function showBookCard(book) {
   <button class = "delete-button">Delete book</button>
   <button class = "Increment-button">Increment copies</button>
   <button class = "Decrement-button">Decrement copies</button>
-  </div>`
-
-  
+  </div>`;
 
   const elemDeleteButton = document.querySelector(".delete-button");
   const elemIncrementButton = document.querySelector(".Increment-button");
@@ -86,28 +83,28 @@ function showBookCard(book) {
   elemDeleteButton.onclick = () => {
     deleteBook(book.id);
     addToHistory("delete", book);
-};
+  };
 
-elemIncrementButton.onclick = () => {
+  elemIncrementButton.onclick = () => {
     incrementBook(book.id, book.num_copies);
     addToHistory("Increment", book);
-};
+  };
 
-elemDecrementButton.onclick = () => {
+  elemDecrementButton.onclick = () => {
     decrementBook(book.id, book.num_copies);
     addToHistory("Decrement", book);
-};
+  };
 }
 
-async function addToHistory(action, book){
+async function addToHistory(action, book) {
   const postData = {
-    "image":book.image,
-    "bookName": book.name,
-    "ISBN": book.ISBN,
-    "action": action,
-    "date": getCurrentDateTime()
-  }
-  await axios.post("http://localhost:8001/history",postData)
+    image: book.image,
+    bookName: book.name,
+    ISBN: book.ISBN,
+    action: action,
+    date: getCurrentDateTime(),
+  };
+  await axios.post("http://localhost:8001/history", postData);
 }
 
 function deleteBook(id) {
@@ -124,19 +121,19 @@ function decrementBook(id, copies) {
 // fetch books from google API
 async function fetchBooks(startIndex, maxResultsNum) {
   const params = {
-      q: "a",
-      key: 'AIzaSyAj03UVAQuKO-sABUxmqOPr8gMxJrna9TQ',
-      maxResults: maxResultsNum,
-      startIndex: startIndex,
-      langRestrict: 'en'
+    q: "a",
+    key: "AIzaSyAj03UVAQuKO-sABUxmqOPr8gMxJrna9TQ",
+    maxResults: maxResultsNum,
+    startIndex: startIndex,
+    langRestrict: "en",
   };
 
   try {
-      const response = await axios.get(worldLibraryUrl, { params });
-      return response.data.items;
+    const response = await axios.get(worldLibraryUrl, { params });
+    return response.data.items;
   } catch (error) {
-      console.error('Error fetching books:', error);
-      return [];
+    console.error("Error fetching books:", error);
+    return [];
   }
 }
 
@@ -144,73 +141,42 @@ async function fetchMultiplePages() {
   let allBooks = [];
   const maxResultsNum = 40;
   for (let page = 0; page < 1; page++) {
-      const startIndex = page * maxResultsNum; 
-      const books = await fetchBooks(startIndex, maxResultsNum);
-      allBooks = allBooks.concat(books);
+    const startIndex = page * maxResultsNum;
+    const books = await fetchBooks(startIndex, maxResultsNum);
+    allBooks = allBooks.concat(books);
   }
 
-   for (const book of allBooks){
-      const volumeInfo = book.volumeInfo || {};
-      const postData = {
-        name: volumeInfo.title || "No Title",
-        author: volumeInfo.authors ? volumeInfo.authors[0] : "Unknown",
-        num_pages: volumeInfo.pageCount || 0,
-        short_description: volumeInfo.description || "No Description",
-        image:
-          (volumeInfo.imageLinks && volumeInfo.imageLinks.thumbnail) ||
-          "https://example.com/no-image.jpg",
-        num_copies: 5,
-        categories: volumeInfo.categories || ["Uncategorized"],
-        ISBN: volumeInfo.industryIdentifiers
-          ? volumeInfo.industryIdentifiers[0].identifier
-          : "None",
-      }
-      addBookToData(postData);
-   }   
-}
-
-async function addBookToData(postData){
-    await axios.post(localLibraryUrl, postData);
-}
-
-
-
-async function searchPerPage(substring, pageToStart, endOfSearch) {
-  let holder = [];
-
-  for (let page = pageToStart; page < totalPages + 1; page++) {
-    const response = await axios.get(`${localLibraryUrl}?_page=${page}`);
-    const booksArrayByPage = response.data.data;
-
-    holder = booksArrayByPage.filter((book) => book.name.includes(substring));
-    for (const item of holder) {
-      filterArray.push(item);
-    }
-    if (filterArray.length >= endOfSearch * 10) {
-      console.log(filterArray);
-      return filterArray;
-    }
+  for (const book of allBooks) {
+    const volumeInfo = book.volumeInfo || {};
+    const postData = {
+      name: volumeInfo.title || "No Title",
+      author: volumeInfo.authors ? volumeInfo.authors[0] : "Unknown",
+      num_pages: volumeInfo.pageCount || 0,
+      short_description: volumeInfo.description || "No Description",
+      image:
+        (volumeInfo.imageLinks && volumeInfo.imageLinks.thumbnail) ||
+        "https://example.com/no-image.jpg",
+      num_copies: 5,
+      categories: volumeInfo.categories || ["Uncategorized"],
+      ISBN: volumeInfo.industryIdentifiers
+        ? volumeInfo.industryIdentifiers[0].identifier
+        : "None",
+    };
+    addBookToData(postData);
   }
-  console.log(filterArray);
-  return filterArray;
 }
 
-async function searchBar() {
-  elementBooksList.innerHTML = "";
-  let endOfSearch = 1;
-  const elementSearchInput = document.querySelector(".search-bar-input");
-  const searchValue = elementSearchInput.value;
-  filterArray = await searchPerPage(searchValue, pageToStart, endOfSearch);
-  printList(filterArray);
-  filterArray = [];
+async function addBookToData(postData) {
+  await axios.post(localLibraryUrl, postData);
 }
 
 function getCurrentDateTime() {
   const now = new Date();
-  const day = String(now.getDate()).padStart(2, '0');
-  const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+  const day = String(now.getDate()).padStart(2, "0");
+  const month = String(now.getMonth() + 1).padStart(2, "0"); // Months are 0-based
   const year = now.getFullYear();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
   return `${day}/${month}/${year}, ${hours}:${minutes}`;
 }
+
