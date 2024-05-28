@@ -31,7 +31,13 @@ async function showBookByPage(pageNum) {
 function printList(array) {
   elementBooksList.innerHTML = "";
   for (const book of array) {
-    elementBooksList.innerHTML += `<li>${book.name}</li>`;
+    elementBooksList.innerHTML += `<li>
+    <img class = "shadow"  src="${book.image}" alt="">
+    <div>
+    <p><h3>Name:</h3> ${book.name}</p>
+    <p><h3>Author:</h3> ${book.author}</p>
+    </div>
+    </li>`;
   }
   const liNodeList = document.querySelectorAll("li");
 
@@ -50,26 +56,26 @@ function previousPage() {
 
 function showBookCard(book) {
   elementBookCard.innerHTML = "";
-  elementBookCard.innerHTML += `<div class="book-card-content-header">
-  <img src="${book.image}"></img>
-
-  <div class="book-card-content-header-text">
-  <p id = ${book.id}><h3>ID:</h3> ${book.id}</p>
-  <p><h3>Name:</h3> ${book.name}</p>
-  </div> 
-
-  </div> 
-  <div class="book-card-content-body">
-  <p> <h3>Author:</h3> ${book.author}</p>
-  <p><h3>Pages:</h3> ${book.num_pages}</p>
-  <p> <h3>Description:</h3> ${book.short_description}</p>
-  <p><h3>Copies:</h3> ${book.num_copies}</p>
-  <p> <h3>Categories:</h3> ${book.categories}</p>
-  <p> <h3>ISBN:</h3> ${book.ISBN}</p>
-  </div> 
+  elementBookCard.innerHTML += `
+  <div><img class = "shadow"  src="${book.image}"></img></div>
 
   
-  <div class="book-card-buttons">
+  <div> <p id = ${book.id}><h3>ID:</h3> ${book.id}</p></div>
+  <div><p><h3>Name:</h3> ${book.name}</p></div>
+  
+
+   
+  
+  <div><p> <h3>Author:</h3> ${book.author}</p></div>
+  <div> <p><h3>Pages:</h3> ${book.num_pages}</p></div>
+  <div><p> <h3>Description:</h3> ${book.short_description}</p></div>
+  <div> <p><h3>Copies:</h3> ${book.num_copies}</p></div>
+  <div><p> <h3>Categories:</h3> ${book.categories}</p></div>
+  <div><p> <h3>ISBN:</h3> ${book.ISBN}</p></div>
+  
+
+  
+  <div>
   <button class = "delete-button">Delete book</button>
   <button class = "Increment-button">Increment copies</button>
   <button class = "Decrement-button">Decrement copies</button>
@@ -204,11 +210,13 @@ async function searchByInput(action) {
   const totalPages = initialResponse.data.pages;
 
   while (searchPageNum <= totalPages) {
-    if (!filteredBooksArrays[currentArrayIndex]){
+    if (!filteredBooksArrays[currentArrayIndex]) {
       filteredBooksArrays.push([]); // new last item
     }
 
-    const response = await axios.get(`${localLibraryUrl}?_page=${searchPageNum}`);
+    const response = await axios.get(
+      `${localLibraryUrl}?_page=${searchPageNum}`
+    );
     const booksPage = response.data.data;
     searchPageNum++;
 
@@ -230,9 +238,8 @@ async function searchByInput(action) {
     }
   }
   printList(filteredBooksArrays[currentArrayIndex]);
-  currentArrayIndex++
+  currentArrayIndex++;
 }
-
 
 function buttonsToggle() {
   const nextPrevious = document.querySelector(".next-previous");
@@ -247,16 +254,17 @@ function buttonsToggle() {
   }
 }
 
-
 async function searchByInputTest() {
   const inputValue = document.querySelector(".search-bar-input").value;
-  let searchPageNum = 1;  // Initialize the search page number
+  let searchPageNum = 1; // Initialize the search page number
 
   const response = await axios.get(`${localLibraryUrl}?_page=1`);
   const totalPages = response.data.pages;
   console.log(totalPages);
   while (searchPageNum <= totalPages) {
-    const response = await axios.get(`${localLibraryUrl}?_page=${searchPageNum}`);
+    const response = await axios.get(
+      `${localLibraryUrl}?_page=${searchPageNum}`
+    );
     const booksPage = response.data.data;
     searchPageNum++;
 
@@ -266,7 +274,7 @@ async function searchByInputTest() {
     }
 
     for (let book of booksPage) {
-      let bookName = book.name
+      let bookName = book.name;
       if (bookName.includes(inputValue)) {
         console.log(bookName);
         console.log(inputValue);
