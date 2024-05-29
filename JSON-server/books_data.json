@@ -1,19 +1,6 @@
 {
   "books": [
     {
-      "id": "2cc2",
-      "name": "Catalogue of Hebrew Books in the British Museum Acquired During the Years 1868-1892",
-      "author": "British Museum. Department of Oriental Printed Books and Manuscripts",
-      "num_pages": 552,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=8EZDAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Hebrew imprints"
-      ],
-      "ISBN": "COLUMBIA:CU58806237"
-    },
-    {
       "id": "982b",
       "name": "A bilingual concordance to the Targum of the Prophets",
       "author": "Johannes Cornelis Moor",
@@ -495,19 +482,6 @@
       "ISBN": "9780755396368"
     },
     {
-      "id": "e0e6",
-      "name": "Ff",
-      "author": "Bela Davis",
-      "num_pages": 27,
-      "short_description": "From flowers to foals, this title has got F words covered! Each instance of \"F\" or \"f\" is bolded so that readers begin to recognize it in words and the sounds it makes. Complete with big colorful photographs, a More Ff Words page, bolded glossary terms, and a picture glossary. Aligned to Common Core Standards and correlated to state standards. Abdo Kids Junior is an imprint of Abdo Kids, a division of ABDO.",
-      "image": "http://books.google.com/books/content?id=NCiqDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Juvenile Nonfiction"
-      ],
-      "ISBN": "9781680795929"
-    },
-    {
       "id": "bbe8",
       "name": "F. F. Bruce",
       "author": "Tim Grass",
@@ -535,45 +509,6 @@
     },
     {
       "id": "6b54",
-      "name": "RGB-D Image Analysis and Processing",
-      "author": "Paul L. Rosin",
-      "num_pages": 524,
-      "short_description": "This book focuses on the fundamentals and recent advances in RGB-D imaging as well as covering a range of RGB-D applications. The topics covered include: data acquisition, data quality assessment, filling holes, 3D reconstruction, SLAM, multiple depth camera systems, segmentation, object detection, salience detection, pose estimation, geometric modelling, fall detection, autonomous driving, motor rehabilitation therapy, people counting and cognitive service robots. The availability of cheap RGB-D sensors has led to an explosion over the last five years in the capture and application of colour plus depth data. The addition of depth data to regular RGB images vastly increases the range of applications, and has resulted in a demand for robust and real-time processing of RGB-D data. There remain many technical challenges, and RGB-D image processing is an ongoing research area. This book covers the full state of the art, and consists of a series of chapters by internationally renowned experts in the field. Each chapter is written so as to provide a detailed overview of that topic. RGB-D Image Analysis and Processing will enable both students and professional developers alike to quickly get up to speed with contemporary techniques, and apply RGB-D imaging in their own projects.",
-      "image": "http://books.google.com/books/content?id=OEa5DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Computers"
-      ],
-      "ISBN": "9783030286033"
-    },
-    {
-      "id": "5eb0",
-      "name": "RGB-D Image Analysis and Processing",
-      "author": "Paul L. Rosin",
-      "num_pages": 524,
-      "short_description": "This book focuses on the fundamentals and recent advances in RGB-D imaging as well as covering a range of RGB-D applications. The topics covered include: data acquisition, data quality assessment, filling holes, 3D reconstruction, SLAM, multiple depth camera systems, segmentation, object detection, salience detection, pose estimation, geometric modelling, fall detection, autonomous driving, motor rehabilitation therapy, people counting and cognitive service robots. The availability of cheap RGB-D sensors has led to an explosion over the last five years in the capture and application of colour plus depth data. The addition of depth data to regular RGB images vastly increases the range of applications, and has resulted in a demand for robust and real-time processing of RGB-D data. There remain many technical challenges, and RGB-D image processing is an ongoing research area. This book covers the full state of the art, and consists of a series of chapters by internationally renowned experts in the field. Each chapter is written so as to provide a detailed overview of that topic. RGB-D Image Analysis and Processing will enable both students and professional developers alike to quickly get up to speed with contemporary techniques, and apply RGB-D imaging in their own projects.",
-      "image": "http://books.google.com/books/content?id=OEa5DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Computers"
-      ],
-      "ISBN": "9783030286033"
-    },
-    {
-      "id": "b9bf",
-      "name": "RGB-D Image Analysis and Processing",
-      "author": "Paul L. Rosin",
-      "num_pages": 524,
-      "short_description": "This book focuses on the fundamentals and recent advances in RGB-D imaging as well as covering a range of RGB-D applications. The topics covered include: data acquisition, data quality assessment, filling holes, 3D reconstruction, SLAM, multiple depth camera systems, segmentation, object detection, salience detection, pose estimation, geometric modelling, fall detection, autonomous driving, motor rehabilitation therapy, people counting and cognitive service robots. The availability of cheap RGB-D sensors has led to an explosion over the last five years in the capture and application of colour plus depth data. The addition of depth data to regular RGB images vastly increases the range of applications, and has resulted in a demand for robust and real-time processing of RGB-D data. There remain many technical challenges, and RGB-D image processing is an ongoing research area. This book covers the full state of the art, and consists of a series of chapters by internationally renowned experts in the field. Each chapter is written so as to provide a detailed overview of that topic. RGB-D Image Analysis and Processing will enable both students and professional developers alike to quickly get up to speed with contemporary techniques, and apply RGB-D imaging in their own projects.",
-      "image": "http://books.google.com/books/content?id=OEa5DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Computers"
-      ],
-      "ISBN": "9783030286033"
-    },
-    {
-      "id": "dadc",
       "name": "RGB-D Image Analysis and Processing",
       "author": "Paul L. Rosin",
       "num_pages": 524,
@@ -649,6 +584,32 @@
         "Uncategorized"
       ],
       "ISBN": "CORNELL:31924077826042"
+    },
+    {
+      "id": "0179",
+      "name": "The Body Keeps the Score",
+      "author": "Bessel van der Kolk, M.D.",
+      "num_pages": 465,
+      "short_description": "#1 New York Times bestseller “Essential reading for anyone interested in understanding and treating traumatic stress and the scope of its impact on society.” —Alexander McFarlane, Director of the Centre for Traumatic Stress Studies A pioneering researcher transforms our understanding of trauma and offers a bold new paradigm for healing in this New York Times bestseller Trauma is a fact of life. Veterans and their families deal with the painful aftermath of combat; one in five Americans has been molested; one in four grew up with alcoholics; one in three couples have engaged in physical violence. Dr. Bessel van der Kolk, one of the world’s foremost experts on trauma, has spent over three decades working with survivors. In The Body Keeps the Score, he uses recent scientific advances to show how trauma literally reshapes both body and brain, compromising sufferers’ capacities for pleasure, engagement, self-control, and trust. He explores innovative treatments—from neurofeedback and meditation to sports, drama, and yoga—that offer new paths to recovery by activating the brain’s natural neuroplasticity. Based on Dr. van der Kolk’s own research and that of other leading specialists, The Body Keeps the Score exposes the tremendous power of our relationships both to hurt and to heal—and offers new hope for reclaiming lives.",
+      "image": "http://books.google.com/books/content?id=3Q3UAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Psychology"
+      ],
+      "ISBN": "9781101608302"
+    },
+    {
+      "id": "a6c0",
+      "name": "Mastery and Slavery in Victorian Writing",
+      "author": "J. Taylor",
+      "num_pages": 240,
+      "short_description": "Taking Hegel's famous \" Master-Slave Dialectic \" as its starting point, this wide-ranging book examines portrayals of masters, slaves and servants in works by Carlyle, Dickens, Eliot, Collins and others. The questions raised about modern mastery and slavery are pursued in relation to intriguing nineteenth-century figures as the American slave-holder, the musician, the demagogue and the Jew.",
+      "image": "http://books.google.com/books/content?id=-SN_DAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Literary Criticism"
+      ],
+      "ISBN": "9780230554733"
     }
   ],
   "history": [
@@ -739,6 +700,62 @@
       "ISBN": "0008537763",
       "action": "Increment",
       "date": "29/05/2024, 17:55"
+    },
+    {
+      "id": "4840",
+      "image": "http://books.google.com/books/content?id=3Q3UAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "The Body Keeps the Score",
+      "ISBN": "9781101608302",
+      "action": "add new book",
+      "date": "29/05/2024, 18:22"
+    },
+    {
+      "id": "f437",
+      "image": "http://books.google.com/books/content?id=NCiqDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "Ff",
+      "ISBN": "9781680795929",
+      "action": "delete",
+      "date": "29/05/2024, 20:01"
+    },
+    {
+      "id": "2bc7",
+      "image": "http://books.google.com/books/content?id=8EZDAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "Catalogue of Hebrew Books in the British Museum Acquired During the Years 1868-1892",
+      "ISBN": "COLUMBIA:CU58806237",
+      "action": "delete",
+      "date": "29/05/2024, 20:57"
+    },
+    {
+      "id": "387a",
+      "image": "http://books.google.com/books/content?id=-SN_DAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "Mastery and Slavery in Victorian Writing",
+      "ISBN": "9780230554733",
+      "action": "add new book",
+      "date": "29/05/2024, 20:59"
+    },
+    {
+      "id": "e13b",
+      "image": "http://books.google.com/books/content?id=OEa5DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "RGB-D Image Analysis and Processing",
+      "ISBN": "9783030286033",
+      "action": "delete",
+      "date": "29/05/2024, 20:59"
+    },
+    {
+      "id": "ea98",
+      "image": "http://books.google.com/books/content?id=OEa5DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "RGB-D Image Analysis and Processing",
+      "ISBN": "9783030286033",
+      "action": "delete",
+      "date": "29/05/2024, 20:59"
+    },
+    {
+      "id": "8c5e",
+      "image": "http://books.google.com/books/content?id=OEa5DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "RGB-D Image Analysis and Processing",
+      "ISBN": "9783030286033",
+      "action": "delete",
+      "date": "29/05/2024, 20:59"
     }
   ],
   "favorites": [
@@ -793,6 +810,45 @@
         "Literary Criticism"
       ],
       "ISBN": "9780801065996"
+    },
+    {
+      "id": "ae5f",
+      "name": "New York Magazine",
+      "author": "Unknown",
+      "num_pages": 140,
+      "short_description": "New York magazine was born in 1968 after a run as an insert of the New York Herald Tribune and quickly made a place for itself as the trusted resource for readers across the country. With award-winning writing and photography covering everything from politics and food to theater and fashion, the magazine's consistent mission has been to reflect back to its audience the energy and excitement of the city itself, while celebrating New York as both a place and an idea.",
+      "image": "http://books.google.com/books/content?id=a-UCAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Uncategorized"
+      ],
+      "ISBN": "None"
+    },
+    {
+      "id": "0179",
+      "name": "The Body Keeps the Score",
+      "author": "Bessel van der Kolk, M.D.",
+      "num_pages": 465,
+      "short_description": "#1 New York Times bestseller “Essential reading for anyone interested in understanding and treating traumatic stress and the scope of its impact on society.” —Alexander McFarlane, Director of the Centre for Traumatic Stress Studies A pioneering researcher transforms our understanding of trauma and offers a bold new paradigm for healing in this New York Times bestseller Trauma is a fact of life. Veterans and their families deal with the painful aftermath of combat; one in five Americans has been molested; one in four grew up with alcoholics; one in three couples have engaged in physical violence. Dr. Bessel van der Kolk, one of the world’s foremost experts on trauma, has spent over three decades working with survivors. In The Body Keeps the Score, he uses recent scientific advances to show how trauma literally reshapes both body and brain, compromising sufferers’ capacities for pleasure, engagement, self-control, and trust. He explores innovative treatments—from neurofeedback and meditation to sports, drama, and yoga—that offer new paths to recovery by activating the brain’s natural neuroplasticity. Based on Dr. van der Kolk’s own research and that of other leading specialists, The Body Keeps the Score exposes the tremendous power of our relationships both to hurt and to heal—and offers new hope for reclaiming lives.",
+      "image": "http://books.google.com/books/content?id=3Q3UAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Psychology"
+      ],
+      "ISBN": "9781101608302"
+    },
+    {
+      "id": "982b",
+      "name": "A bilingual concordance to the Targum of the Prophets",
+      "author": "Johannes Cornelis Moor",
+      "num_pages": 368,
+      "short_description": "Now updated with new material on AIDS and support groups, this “completely non-judgmental, very informative, and extremely effective book” (Library Journal)is a standard reference for parents of gays and lesbians.",
+      "image": "http://books.google.com/books/content?id=11wlAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "num_copies": 3,
+      "categories": [
+        "Bibles"
+      ],
+      "ISBN": "STANFORD:36105110278483"
     }
   ]
 }
