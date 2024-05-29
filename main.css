@@ -109,6 +109,7 @@ li img {
 }
 
 .book-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   /* gap: 30px; */
@@ -276,4 +277,38 @@ button:hover {
   color: white;
   margin-left: 500px;
   font-size:35px ;
+}
+.favorites-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 70px;
+}
+
+.singal-favorite-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 20px;
+  padding-block: 15px;
+  gap: 18px;
+  justify-content: space-between;
+  border-radius: 5px;
+  position: relative;
+}
+
+.singal-favorite-card img {
+  max-width: 150px;
+}
+
+.favorite-icon {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  font-size: 30px;
+}
+
+.singal-favorite-card .fa-star {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
