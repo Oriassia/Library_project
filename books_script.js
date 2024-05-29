@@ -234,102 +234,102 @@ let totalBooksArray = [];
 let currentBooksArray = [];
 let totalSearchPages = 1;
 
-function searchPageToggle(action) {
-  if (totalBooksArray.length === 0) {
-    console.log("yessssssssss");
-    currentArrayIndex = 0;
-    printSearchList(currentArrayIndex);
-  } else {
-    switch (action) {
-      case "previous":
-        if (currentArrayIndex >= 1) {
-          currentArrayIndex--;
-        }
-        break;
+// function searchPageToggle(action) {
+//   if (totalBooksArray.length === 0) {
+//     console.log("yessssssssss");
+//     currentArrayIndex = 0;
+//     printSearchList(currentArrayIndex);
+//   } else {
+//     switch (action) {
+//       case "previous":
+//         if (currentArrayIndex >= 1) {
+//           currentArrayIndex--;
+//         }
+//         break;
 
-      default:
-        if (!totalBooksArray[currentArrayIndex + 1]) {
-          searchByInputTest().then(() => {
-            currentArrayIndex++;
-            printSearchList(currentArrayIndex);
-          });
-        } else {
-          currentArrayIndex++;
-          printSearchList(currentArrayIndex);
-        }
-        break;
-    }
-    printSearchList(currentArrayIndex);
-  }
-}
+//       default:
+//         if (!totalBooksArray[currentArrayIndex + 1]) {
+//           searchByInputTest().then(() => {
+//             currentArrayIndex++;
+//             printSearchList(currentArrayIndex);
+//           });
+//         } else {
+//           currentArrayIndex++;
+//           printSearchList(currentArrayIndex);
+//         }
+//         break;
+//     }
+//     printSearchList(currentArrayIndex);
+//   }
+// }
 
-function printSearchList(index) {
-  if (!totalBooksArray[index]) {
-    searchByInputTest().then(() => {
-      printSearchList(index);
-    });
-  } else {
-    elementBooksList.innerHTML = "";
-    for (const book of totalBooksArray[index]) {
-      elementBooksList.innerHTML += `<li>
-      <img class = "shadow"  src="${book.image}" alt="">
-      <div>
-      <p><h3>Name:</h3> ${book.name}</p>
-      <p><h3>Author:</h3> ${book.author}</p>
-      </div>
-      </li>`;
-    }
-    const liNodeList = document.querySelectorAll("li");
+// function printSearchList(index) {
+//   if (!totalBooksArray[index]) {
+//     searchByInputTest().then(() => {
+//       printSearchList(index);
+//     });
+//   } else {
+//     elementBooksList.innerHTML = "";
+//     for (const book of totalBooksArray[index]) {
+//       elementBooksList.innerHTML += `<li>
+//       <img class = "shadow"  src="${book.image}" alt="">
+//       <div>
+//       <p><h3>Name:</h3> ${book.name}</p>
+//       <p><h3>Author:</h3> ${book.author}</p>
+//       </div>
+//       </li>`;
+//     }
+//     const liNodeList = document.querySelectorAll("li");
 
-    liNodeList.forEach((li, i) => {
-      li.onclick = () => showBookCard(array[i]);
-    });
-  }
-}
+//     liNodeList.forEach((li, i) => {
+//       li.onclick = () => showBookCard(array[i]);
+//     });
+//   }
+// }
 
-async function searchByInputTest() {
-  buttonsToggle();
+// async function searchByInputTest() {
+//   buttonsToggle();
 
-  const inputValue = document.querySelector(".search-bar-input").value;
-  if (inputValue !== currentInputValue) {
-    // Reset if input value has changed
-    currentInputValue = inputValue;
-    searchPageIndex = 1;
-    totalBooksArray = [];
-    currentBooksArray = [];
-    currentArrayIndex = 0;
-  }
+//   const inputValue = document.querySelector(".search-bar-input").value;
+//   if (inputValue !== currentInputValue) {
+//     // Reset if input value has changed
+//     currentInputValue = inputValue;
+//     searchPageIndex = 1;
+//     totalBooksArray = [];
+//     currentBooksArray = [];
+//     currentArrayIndex = 0;
+//   }
 
-  while (searchPageIndex <= totalSearchPages) {
-    const initialResponse = await axios.get(
-      `${localLibraryUrl}?_page=${searchPageIndex}`
-    );
-    totalSearchPages = initialResponse.data.pages;
-    const booksPage = initialResponse.data.data;
-    searchPageIndex++;
+//   while (searchPageIndex <= totalSearchPages) {
+//     const initialResponse = await axios.get(
+//       `${localLibraryUrl}?_page=${searchPageIndex}`
+//     );
+//     totalSearchPages = initialResponse.data.pages;
+//     const booksPage = initialResponse.data.data;
+//     searchPageIndex++;
 
-    for (let book of booksPage) {
-      if (book.name.includes(inputValue)) {
-        if (currentBooksArray.length < 10) {
-          currentBooksArray.push(book);
-        } else {
-          totalBooksArray.push(currentBooksArray);
-          currentBooksArray = [book];
-        }
-      }
-    }
+//     for (let book of booksPage) {
+//       if (book.name.includes(inputValue)) {
+//         if (currentBooksArray.length < 10) {
+//           currentBooksArray.push(book);
+//         } else {
+//           totalBooksArray.push(currentBooksArray);
+//           currentBooksArray = [book];
+//         }
+//       }
+//     }
 
-    if (totalBooksArray[currentArrayIndex]) {
-      if (totalBooksArray[currentArrayIndex].length == 10) {
-        break;
-      }
-    }
-  }
+//     if (totalBooksArray[currentArrayIndex]) {
+//       if (totalBooksArray[currentArrayIndex].length == 10) {
+//         break;
+//       }
+//     }
+//   }
 
-  if (currentBooksArray.length > 0) {
-    totalBooksArray.push(currentBooksArray);
-  }
-}
+//   if (currentBooksArray.length > 0) {
+//     totalBooksArray.push(currentBooksArray);
+//   }
+// }
 
 function stringLengthLimit(str, maxLength) {
   return str.length > maxLength ? `${str.slice(0, maxLength)}...` : str;

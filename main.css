@@ -5,6 +5,10 @@ h3 {
 main {
   height: 100vh;
 }
+.header-container{
+  position: relative;
+
+}
 .search-bar {
   display: flex;
   justify-content: center;
@@ -20,7 +24,14 @@ main {
   text-align: center;
   outline: none;
 }
-
+.harvard-logo {
+  width: 80px;
+  display: inline-block;
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  bottom: 1px;
+}
 .search-bar i {
   cursor: pointer;
 }
@@ -39,12 +50,16 @@ svg {
   text-align: center;
 }
 .nav-bar a {
+  padding-block: 17px;
   text-decoration: none;
   color: black;
   font-size: 20px;
-  margin-inline: 10px;
+  margin-inline: 40px;
 }
-
+.nav-bar a:hover {
+  color: #023047;
+  border-bottom: #023047 solid 5px;
+}
 .background {
   height: 305px;
   background-color: yellow;
@@ -75,8 +90,13 @@ ul {
   gap: 20px;
   align-items: center;
   padding: 20px;
-  border: solid 1px black;
+  border: solid 1px #bebebe;
+  transition: 0.6s;
+  cursor: pointer;
   /* border-radius: 5px; */
+}
+.books-content li:hover {
+  transform: scale(1.05);
 }
 li img {
   max-width: 15%;
@@ -99,7 +119,6 @@ li img {
   margin-block: auto;
   margin-top: 80px;
   width: 80%;
-  position: relative;
 
   background: rgba(2, 47, 70, 0.1);
   border-radius: 10px;
@@ -125,14 +144,19 @@ button {
 }
 
 footer {
+  display: flex;
+  justify-content: space-evenly;
+  
+  padding: 28px;
   position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: #023047;
   color: white;
-  text-align: center;
+  
 }
+
 
 /* Table design */
 .history-table {
@@ -240,44 +264,16 @@ button:hover {
   background-color: #fb8500;
 }
 .add-book-content {
-  margin-top: 40px;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(2, 48, 71,0.1);
 }
-
-/* favorites grid design */
-.favorites-grid {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  padding: 70px;
-}
-
-.singal-favorite-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-inline: 20px;
-  padding-block: 15px;
-  gap: 18px;
-  justify-content: space-between;
-  border-radius: 5px;
-  position: relative;
-}
-
-.singal-favorite-card img {
-  max-width: 150px;
-}
-
-.favorite-icon {
-  position: absolute;
-  right: 40px;
-  top: 40px;
-  font-size: 30px;
-}
-
-.singal-favorite-card .fa-star {
-  position: absolute;
-  right: 20px;
-  top: 20px;
+.fa-github{
+  color: white;
+  margin-left: 500px;
+  font-size:35px ;
 }
