@@ -63,7 +63,7 @@ svg {
 .background {
   height: 305px;
   background-color: yellow;
-  background-image: url("background copy 3.png");
+  background-image: url("/images/background copy 3.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -78,14 +78,9 @@ svg {
 .books-list-container {
   width: 850px;
 }
-ul {
-  /* padding-left: 0; */
-}
-.books-content li {
-  /* margin: 15px; */
-  /* font-size: 18px; */
 
-  /* list-style: none; */
+.books-content li {
+
   display: flex;
   gap: 20px;
   align-items: center;
@@ -93,7 +88,7 @@ ul {
   border: solid 1px #bebebe;
   transition: 0.6s;
   cursor: pointer;
-  /* border-radius: 5px; */
+ 
 }
 .books-content li:hover {
   transform: scale(1.05);

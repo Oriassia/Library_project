@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS-files/main.css" />
+    <link rel="stylesheet" href="/CSS-files/reset.css" />
+  </head>
+  <body>
+    <main>
+      <div class="header-container">
+        <a href="home_html.html"
+          ><img class="harvard-logo" src="/images/harvard-logo.png" alt=""
+        /></a>
+        <div class="search-bar">
+          <input type="text" placeholder="Book name" class="search-bar-input" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <nav class="nav-bar">
+        <a href="/HTML-files/home_html.html">Home</a>
+        <a href="/HTML-files/addBook_html.html">Add book</a>
+        <a href="/HTML-files/history_html.html">History</a>
+        <a href="/HTML-files/favorites_html.html">Favorite</a>
+      </nav>
+      <div class="background"></div>
+      <div class="history-content">
+        <button onclick="previousPageHistoryTable()()">Previous</button>
+        <button onclick="nextPageHistoryTable()">Next</button>
+        <table class="history-table"></table>
+      </div>
+      <img src="" alt="" />
+      <footer>
+        <p>This site © 2024 Joni Uzan & Ori Assia</p>
+        <a href="https://github.com/Oriassia/Library_project" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="home_html.html"
+          ><img class="harvard-logo" src="/images/harvard-logo.png" alt=""
+        /></a>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/JAVASCRIPT-files/history.js"></script>
+  </body>
+</html>
