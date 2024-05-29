@@ -1,19 +1,6 @@
 {
   "books": [
     {
-      "id": "df2e",
-      "name": "A New and Easy Method of Learning Hebrew Without Points",
-      "author": "Richard Grey",
-      "num_pages": 382,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=RSevkFe_I4EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 6,
-      "categories": [
-        "Hebrew language"
-      ],
-      "ISBN": "UBBS:UBBS-00116210"
-    },
-    {
       "id": "2cc2",
       "name": "Catalogue of Hebrew Books in the British Museum Acquired During the Years 1868-1892",
       "author": "British Museum. Department of Oriental Printed Books and Manuscripts",
@@ -33,7 +20,7 @@
       "num_pages": 368,
       "short_description": "Now updated with new material on AIDS and support groups, this “completely non-judgmental, very informative, and extremely effective book” (Library Journal)is a standard reference for parents of gays and lesbians.",
       "image": "http://books.google.com/books/content?id=11wlAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "num_copies": 4,
+      "num_copies": 3,
       "categories": [
         "Bibles"
       ],
@@ -72,7 +59,7 @@
       "num_pages": 168,
       "short_description": "New York magazine was born in 1968 after a run as an insert of the New York Herald Tribune and quickly made a place for itself as the trusted resource for readers across the country. With award-winning writing and photography covering everything from politics and food to theater and fashion, the magazine's consistent mission has been to reflect back to its audience the energy and excitement of the city itself, while celebrating New York as both a place and an idea.",
       "image": "http://books.google.com/books/content?id=A-ECAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
+      "num_copies": 6,
       "categories": [
         "Uncategorized"
       ],
@@ -233,19 +220,6 @@
         "Uncategorized"
       ],
       "ISBN": "BL:A0021970424"
-    },
-    {
-      "id": "1208",
-      "name": "Free Trade in Land ... With a reprint of the ... pamphlet published by the Anti-Corn-Law League “The Constituional right to a revision of the Land Tax” ... Second edition",
-      "author": "James Beal",
-      "num_pages": 182,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=a-xOnCp-3noC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Uncategorized"
-      ],
-      "ISBN": "BL:A0022108572"
     },
     {
       "id": "133b",
@@ -462,7 +436,7 @@
       "num_pages": 0,
       "short_description": "Begin your journey into Middle-earth. A New Legend Begins on Prime Video, in The Lord of the Rings: The Rings of Power. This one-volume, paperback edition includes The Fellowship of the Ring, The Two Towers, and The Return of the King, together with the Appendices in full. Sauron, the Dark Lord, has gathered to him all the Rings of Power - the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring - the ring that rules them all - which has fallen into the hands of the hobbit, Bilbo Baggins. In a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as the Ring is entrusted to his care. He must leave his home and make a perilous journey across the realms of Middle-earth to the Crack of Doom, deep inside the territories of the Dark Lord. There he must destroy the Ring forever and foil the Dark Lord in his evil purpose.",
       "image": "http://books.google.com/books/content?id=GfrqzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "num_copies": 5,
+      "num_copies": 6,
       "categories": [
         "Fiction"
       ],
@@ -631,7 +605,7 @@
       "num_pages": 256,
       "short_description": "Insightful and thorough, \"Inside Narnia\" will dig deeper into Lewis's magicalworld to reveal biblical truths that often go uncovered.",
       "image": "http://books.google.com/books/content?id=VYC8Ks0vRncC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
+      "num_copies": 6,
       "categories": [
         "Literary Criticism"
       ],
@@ -701,34 +675,85 @@
       "ISBN": "9781847651341",
       "action": "Increment",
       "date": "28/05/2024, 18:26"
+    },
+    {
+      "id": "791f",
+      "image": "http://books.google.com/books/content?id=RSevkFe_I4EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "A New and Easy Method of Learning Hebrew Without Points",
+      "ISBN": "UBBS:UBBS-00116210",
+      "action": "Increment",
+      "date": "29/05/2024, 17:54"
+    },
+    {
+      "id": "340f",
+      "image": "http://books.google.com/books/content?id=RSevkFe_I4EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "A New and Easy Method of Learning Hebrew Without Points",
+      "ISBN": "UBBS:UBBS-00116210",
+      "action": "Decrement",
+      "date": "29/05/2024, 17:54"
+    },
+    {
+      "id": "6cae",
+      "image": "http://books.google.com/books/content?id=a-xOnCp-3noC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "Free Trade in Land ... With a reprint of the ... pamphlet published by the Anti-Corn-Law League “The Constituional right to a revision of the Land Tax” ... Second edition",
+      "ISBN": "BL:A0022108572",
+      "action": "delete",
+      "date": "29/05/2024, 17:54"
+    },
+    {
+      "id": "6a88",
+      "image": "http://books.google.com/books/content?id=A-ECAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "New York Magazine",
+      "ISBN": "None",
+      "action": "Increment",
+      "date": "29/05/2024, 17:54"
+    },
+    {
+      "id": "ca62",
+      "image": "http://books.google.com/books/content?id=RSevkFe_I4EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "A New and Easy Method of Learning Hebrew Without Points",
+      "ISBN": "UBBS:UBBS-00116210",
+      "action": "delete",
+      "date": "29/05/2024, 17:54"
+    },
+    {
+      "id": "97fd",
+      "image": "http://books.google.com/books/content?id=11wlAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "bookName": "A bilingual concordance to the Targum of the Prophets",
+      "ISBN": "STANFORD:36105110278483",
+      "action": "Decrement",
+      "date": "29/05/2024, 17:54"
+    },
+    {
+      "id": "cdaa",
+      "image": "http://books.google.com/books/content?id=VYC8Ks0vRncC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "Inside Narnia",
+      "ISBN": "9780801065996",
+      "action": "Increment",
+      "date": "29/05/2024, 17:55"
+    },
+    {
+      "id": "033d",
+      "image": "http://books.google.com/books/content?id=GfrqzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "bookName": "The Lord of the Rings",
+      "ISBN": "0008537763",
+      "action": "Increment",
+      "date": "29/05/2024, 17:55"
     }
   ],
   "favorites": [
     {
-      "id": "5474",
-      "name": "Libri ebraici a Mantova: Le edizioni del XVI secolo nella biblioteca della comunità ebraica",
-      "author": "Giulio Busi",
-      "num_pages": 316,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=fIBFAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "id": "f20c",
+      "name": "The 48 Laws of Power",
+      "author": "Robert Greene",
+      "num_pages": 497,
+      "short_description": "Amoral, cunning, ruthless, and instructive, this multi-million-copy New York Times bestseller is the definitive manual for anyone interested in gaining, observing, or defending against ultimate control – from the author of The Laws of Human Nature. In the book that People magazine proclaimed “beguiling” and “fascinating,” Robert Greene and Joost Elffers have distilled three thousand years of the history of power into 48 essential laws by drawing from the philosophies of Machiavelli, Sun Tzu, and Carl Von Clausewitz and also from the lives of figures ranging from Henry Kissinger to P.T. Barnum. Some laws teach the need for prudence (“Law 1: Never Outshine the Master”), others teach the value of confidence (“Law 28: Enter Action with Boldness”), and many recommend absolute self-preservation (“Law 15: Crush Your Enemy Totally”). Every law, though, has one thing in common: an interest in total domination. In a bold and arresting two-color package, The 48 Laws of Power is ideal whether your aim is conquest, self-defense, or simply to understand the rules of the game.",
+      "image": "http://books.google.com/books/content?id=afCxg5sogvAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
       "categories": [
-        "Antiques & Collectibles"
+        "Self-Help"
       ],
-      "ISBN": "STANFORD:36105021168849"
-    },
-    {
-      "id": "982b",
-      "name": "A bilingual concordance to the Targum of the Prophets",
-      "author": "Johannes Cornelis Moor",
-      "num_pages": 368,
-      "short_description": "Now updated with new material on AIDS and support groups, this “completely non-judgmental, very informative, and extremely effective book” (Library Journal)is a standard reference for parents of gays and lesbians.",
-      "image": "http://books.google.com/books/content?id=11wlAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Bibles"
-      ],
-      "ISBN": "STANFORD:36105110278483"
+      "ISBN": "9781101042458"
     }
   ]
 }
