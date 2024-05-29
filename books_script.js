@@ -204,7 +204,6 @@ let currentBooksArray = [];
 let totalSearchPages = 1;
 
 function searchPageToggle(action) {
-  if (event) event.preventDefault(); //  
   if (totalBooksArray.length === 0) {
     console.log("yessssssssss");
     currentArrayIndex = 0;
