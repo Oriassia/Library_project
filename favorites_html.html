@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="reset.css" />
+  </head>
+  <body>
+    <main>
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xml:space="preserve"
+          version="1.1"
+          style="
+            shape-rendering: geometricPrecision;
+            text-rendering: geometricPrecision;
+            image-rendering: optimizeQuality;
+          "
+          viewBox="0 0 333 416.25"
+          x="0px"
+          y="0px"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+        >
+          <defs>
+            <style type="text/css">
+              .fil0 {
+                fill: black;
+              }
+            </style>
+          </defs>
+          <g>
+            <path
+              class="fil0"
+              d="M143 169l0 13 100 -66 0 -13 -100 66 -101 -66 0 -42 101 66 0 42zm-24 138l51 -44 15 14 -50 46c-9,8 -24,-8 -16,-16zm102 -130c5,-2 9,8 3,10 -7,2 -6,-1 -7,-3 -1,-2 -2,-5 4,-7zm-7 16c-11,6 -16,19 -18,32 -4,-15 -2,-31 12,-41 6,-4 11,5 6,9zm14 -45c35,0 63,28 63,63 0,35 -28,63 -63,63 -31,0 -56,-23 -61,-53l-24 16 0 -13 0 -42 -101 -66 0 42 101 66 23 -15c1,-34 29,-61 62,-61zm0 18c25,0 45,20 45,45 0,25 -20,45 -45,45 -24,0 -44,-20 -44,-45 0,-25 20,-45 44,-45zm-85 114l-101 -66 0 -42 101 66 0 42zm-96 -228l97 64 89 -52 -100 -56 -86 44zm37 4l18 11 50 -28 -18 -11 -50 28z"
+            />
+          </g>
+        </svg>
+        <div class="search-bar">
+          <input type="text" placeholder="Book name" class="search-bar-input" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <nav class="nav-bar">
+        <a href="/home_html.html">Home</a>
+        <a href="/addBook_html.html">Add book</a>
+        <a href="/history_html.html">History</a>
+        <a href="">Favorite</a>
+      </nav>
+      <div class="background"></div>
+      <div class="history-content">
+        <table class="history-table"></table>
+      </div>
+      <img src="" alt="" />
+      <footer><p>footer</p></footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      showHistory();
+
+      async function showHistory() {
+        try {
+          const response = await axios.get("http://localhost:8001/history");
+          const historyData = response.data;
+          let historyTableElem = document.querySelector(".history-table");
+
+          // Clear existing rows in case the function is called multiple times
+          historyTableElem.innerHTML = `<tr>
+            <th>Place</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>ISBN</th>
+            <th>Action</th>
+            <th>Date & Time</th>
+          </tr>`;
+
+          for (const obj of historyData) {
+            historyTableElem.innerHTML += `<tr>
+                        <td>${historyData.indexOf(obj) + 1}</td>
+                        <td><img src="${obj.image}" alt=""></td>
+                        <td>${obj.bookName}</td>
+                        <td>${obj.ISBN}</td>
+                        <td>${obj.action}</td>
+                        <td>${obj.date}</td>
+                    </tr>`;
+          }
+
+          document.querySelector(".history-content").style.display = "block";
+        } catch (error) {
+          console.error("Error fetching history data:", error);
+        }
+      }
+
+      // Example function to demonstrate button functionality
+      async function fetchMultiplePages() {
+        console.log("fetchMultiplePages called");
+      }
+    </script>
+  </body>
+</html>
