@@ -1,19 +1,6 @@
 {
   "books": [
     {
-      "id": "df2e",
-      "name": "A New and Easy Method of Learning Hebrew Without Points",
-      "author": "Richard Grey",
-      "num_pages": 382,
-      "short_description": "No Description",
-      "image": "http://books.google.com/books/content?id=RSevkFe_I4EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "num_copies": 5,
-      "categories": [
-        "Hebrew language"
-      ],
-      "ISBN": "UBBS:UBBS-00116210"
-    },
-    {
       "id": "2cc2",
       "name": "Catalogue of Hebrew Books in the British Museum Acquired During the Years 1868-1892",
       "author": "British Museum. Department of Oriental Printed Books and Manuscripts",
@@ -857,6 +844,45 @@
         "Young Adult Fiction"
       ],
       "ISBN": "9780545229937"
+    },
+    {
+      "id": "89a4",
+      "name": "The Four Agreements",
+      "author": "Don Miguel Ruiz",
+      "num_pages": 102,
+      "short_description": "Bestselling author don Miguel Ruiz reveals the source of self-limiting beliefs that rob us of joy and create needless suffering. Based on ancient Toltec wisdom, The Four Agreements offer a powerful code of conduct that can rapidly transform our lives to a new experience of freedom, true happiness, and love. • A New York Times bestseller for over 7 years • Over 5.2 million copies sold in the U.S. • Translated into 38 languages worldwide Don Miguel Ruiz’s book is a roadmap to enlightenment and freedom.” — Deepak Chopra, Author, The Seven Spiritual Laws of Success “An inspiring book with many great lessons . . .” — Wayne Dyer, Author, Real Magic “In the tradition of Castaneda, Ruiz distills essential Toltec wisdom, expressing with clarity and impeccability what it means for men and women to live as peaceful warriors in the modern world.” — Dan Millman, Author, Way of the Peaceful Warrior",
+      "image": "http://books.google.com/books/content?id=hzVxiw2DiOsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 6,
+      "categories": [
+        "Self-Help"
+      ],
+      "ISBN": "9781934408018"
+    },
+    {
+      "id": "e738",
+      "name": "The Laws of Human Nature",
+      "author": "Robert Greene",
+      "num_pages": 609,
+      "short_description": "WINNER OF THE INTERNATIONAL BUSINESS BOOK AWARD 2019 From the million-copy bestselling author of The 48 Laws of Power Robert Greene is a master guide for millions of readers, distilling ancient wisdom and philosophy into essential texts for seekers of power, understanding and mastery. Now he turns to the most important subject of all - understanding people's drives and motivations, even when they are unconscious of them themselves. We are social animals. Our very lives depend on our relationships with people. Knowing why people do what they do is the most important tool we can possess, without which our other talents can only take us so far. Drawing from the ideas and examples of Pericles, Queen Elizabeth I, Martin Luther King Jr, and many others, Greene teaches us how to detach ourselves from our own emotions and master self-control, how to develop the empathy that leads to insight, how to look behind people's masks, and how to resist conformity to develop your singular sense of purpose. Whether at work, in relationships, or in shaping the world around you, The Laws of Human Nature offers brilliant tactics for success, self-improvement, and self-defence.",
+      "image": "http://books.google.com/books/content?id=0U5XDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Self-Help"
+      ],
+      "ISBN": "9781782833888"
+    },
+    {
+      "id": "72d7",
+      "name": "The Lord of the Rings",
+      "author": "J. R. R. Tolkien",
+      "num_pages": 0,
+      "short_description": "Begin your journey into Middle-earth. A New Legend Begins on Prime Video, in The Lord of the Rings: The Rings of Power. This one-volume, paperback edition includes The Fellowship of the Ring, The Two Towers, and The Return of the King, together with the Appendices in full. Sauron, the Dark Lord, has gathered to him all the Rings of Power - the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring - the ring that rules them all - which has fallen into the hands of the hobbit, Bilbo Baggins. In a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as the Ring is entrusted to his care. He must leave his home and make a perilous journey across the realms of Middle-earth to the Crack of Doom, deep inside the territories of the Dark Lord. There he must destroy the Ring forever and foil the Dark Lord in his evil purpose.",
+      "image": "http://books.google.com/books/content?id=GfrqzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Fiction"
+      ],
+      "ISBN": "0008537763"
     }
   ],
   "history": [
@@ -883,6 +909,38 @@
       "ISBN": "9781847651341",
       "action": "Increment",
       "date": "28/05/2024, 18:26"
+    },
+    {
+      "id": "0676",
+      "image": "http://books.google.com/books/content?id=hzVxiw2DiOsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "The Four Agreements",
+      "ISBN": "9781934408018",
+      "action": "Increment",
+      "date": "28/05/2024, 23:07"
+    },
+    {
+      "id": "dde1",
+      "image": "http://books.google.com/books/content?id=RSevkFe_I4EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "A New and Easy Method of Learning Hebrew Without Points",
+      "ISBN": "UBBS:UBBS-00116210",
+      "action": "delete",
+      "date": "29/05/2024, 10:19"
+    },
+    {
+      "id": "a07e",
+      "image": "http://books.google.com/books/content?id=0U5XDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "The Laws of Human Nature",
+      "ISBN": "9781782833888",
+      "action": "add new book",
+      "date": "29/05/2024, 10:31"
+    },
+    {
+      "id": "0161",
+      "image": "http://books.google.com/books/content?id=GfrqzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "bookName": "The Lord of the Rings",
+      "ISBN": "0008537763",
+      "action": "add new book",
+      "date": "29/05/2024, 10:46"
     }
   ]
 }

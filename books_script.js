@@ -280,3 +280,6 @@ async function searchByInputTest() {
     totalBooksArray.push(currentBooksArray);
   }
 }
+function stringLengthLimit(str, maxLength) {
+  return str.length > maxLength ? `${str.slice(0, maxLength)}...` : str;
+}

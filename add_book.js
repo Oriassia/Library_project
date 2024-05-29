@@ -1,6 +1,3 @@
-const localLibraryUrl = "http://localhost:8001/books";
-let worldLibraryUrl = "https://www.googleapis.com/books/v1/volumes";
-
 const form = document.querySelector(".add-book-form");
 const bookNameInput = document.querySelector("#name");
 const authorInput = document.querySelector("#author");
@@ -63,7 +60,7 @@ function printList(array) {
             book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail
           }" alt="">
           <div>
-          <p><h3>Name:</h3> ${book.volumeInfo.title}</p>
+          <p><h3>Name:</h3> ${stringLengthLimit(book.volumeInfo.title, 30)}</p>
           <p><h3>Author:</h3> ${book.volumeInfo.authors}</p>
           <p><h3>ISBN:</h3> ${
             book.volumeInfo.industryIdentifiers
@@ -116,5 +113,7 @@ async function addBookToData(book) {
       ? book.volumeInfo.industryIdentifiers[0].identifier
       : "None",
   };
-  await axios.post(localLibraryUrl, bookToPost);
+  await axios
+    .post(localLibraryUrl, bookToPost)
+    .then(addToHistory("add new book", bookToPost));
 }
