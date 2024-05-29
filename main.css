@@ -83,9 +83,9 @@ li img {
   height: 15%;
 }
 .next-previous {
-  margin-block: 15px;
-  display: flex;
-  justify-content: space-around;
+  margin-block: 10px;
+  /* display: flex; */
+  /* justify-content: space-around; */
 }
 
 .book-card {

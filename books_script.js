@@ -185,7 +185,7 @@ function getCurrentDateTime() {
 
 function buttonsToggle() {
   const nextPrevious = document.querySelector(".next-previous");
-  const nextPreviousSearch = document.querySelector(".next-previous-search");
+  const nextPreviousSearch = document.querySelector(".next-previous.search");
 
   if (nextPrevious) {
     nextPrevious.style.display = "none";
@@ -229,12 +229,31 @@ function searchPageToggle(action) {
     }
     printSearchList(currentArrayIndex);
   }
+}
 
-  const liNodeList = document.querySelectorAll("li");
 
-  liNodeList.forEach((li, i) => {
-    li.onclick = () => showBookCard(totalBooksArray[index][i]);
-  });
+function printSearchList(index) {
+  if (!totalBooksArray[index]) {
+    searchByInputTest().then(() => {
+      printSearchList(index);
+    });
+  } else {
+    elementBooksList.innerHTML = "";
+    for (const book of totalBooksArray[index]) {
+      elementBooksList.innerHTML += `<li>
+      <img class = "shadow"  src="${book.image}" alt="">
+      <div>
+      <p><h3>Name:</h3> ${book.name}</p>
+      <p><h3>Author:</h3> ${book.author}</p>
+      </div>
+      </li>`;
+    }
+    const liNodeList = document.querySelectorAll("li");
+  
+    liNodeList.forEach((li, i) => {
+      li.onclick = () => showBookCard(array[i]);
+    });
+  }
 }
 
 async function searchByInputTest() {
@@ -280,6 +299,7 @@ async function searchByInputTest() {
     totalBooksArray.push(currentBooksArray);
   }
 }
+
 function stringLengthLimit(str, maxLength) {
   return str.length > maxLength ? `${str.slice(0, maxLength)}...` : str;
 }
