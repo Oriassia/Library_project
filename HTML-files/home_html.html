@@ -25,11 +25,13 @@
         /></a>
 
         <div class="search-bar">
-          <input type="text" placeholder="Book name" class="search-bar-input" />
-          <i
-            class="fa-solid fa-magnifying-glass"
-            onclick="searchPageToggle()"
-          ></i>
+          <input
+            oninput="runSearch()"
+            type="text"
+            placeholder="Book name"
+            class="search-bar-input"
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </div>
       <nav class="nav-bar">
@@ -42,14 +44,21 @@
       <img src="" alt="" />
       <div class="books-content">
         <div class="books-list-container">
-          <div class="books-list-container-header"></div>
-          <div class="next-previous">
-            <button class="prev" onclick="previousPage()">Previous</button>
-            <button class="next" onclick="nextPage()">Next</button>
+          <div class="books-list-container-header">
+            <div class="next-previous">
+              <button class="prev" onclick="previousPage()">Previous</button>
+              <button class="next" onclick="nextPage()">Next</button>
+            </div>
+            <div class="pages-count"></div>
           </div>
-          <div style="display: none" class="next-previous search">
-            <button onclick="searchPageToggle(`previous`)">Previous</button>
-            <button onclick="searchPageToggle()">Next</button>
+          <div class="books-list-search-header">
+            <div style="display: none" class="next-previous search">
+              <button onclick="displaySearchResults('previous')">
+                Previous
+              </button>
+              <button onclick="displaySearchResults('next')">Next</button>
+            </div>
+            <div class="pages-count"></div>
           </div>
           <ol class="books-list"></ol>
         </div>
