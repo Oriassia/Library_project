@@ -8,7 +8,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=RSevkFe_I4EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Hebrew language"],
+      "categories": [
+        "Hebrew language"
+      ],
       "ISBN": "UBBS:UBBS-00116210"
     },
     {
@@ -19,7 +21,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=8EZDAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Hebrew imprints"],
+      "categories": [
+        "Hebrew imprints"
+      ],
       "ISBN": "COLUMBIA:CU58806237"
     },
     {
@@ -30,7 +34,9 @@
       "short_description": "Now updated with new material on AIDS and support groups, this “completely non-judgmental, very informative, and extremely effective book” (Library Journal)is a standard reference for parents of gays and lesbians.",
       "image": "http://books.google.com/books/content?id=11wlAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Bibles"],
+      "categories": [
+        "Bibles"
+      ],
       "ISBN": "STANFORD:36105110278483"
     },
     {
@@ -41,7 +47,9 @@
       "short_description": "New York magazine was born in 1968 after a run as an insert of the New York Herald Tribune and quickly made a place for itself as the trusted resource for readers across the country. With award-winning writing and photography covering everything from politics and food to theater and fashion, the magazine's consistent mission has been to reflect back to its audience the energy and excitement of the city itself, while celebrating New York as both a place and an idea.",
       "image": "http://books.google.com/books/content?id=a-UCAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "None"
     },
     {
@@ -52,7 +60,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=fIBFAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Antiques & Collectibles"],
+      "categories": [
+        "Antiques & Collectibles"
+      ],
       "ISBN": "STANFORD:36105021168849"
     },
     {
@@ -63,7 +73,9 @@
       "short_description": "New York magazine was born in 1968 after a run as an insert of the New York Herald Tribune and quickly made a place for itself as the trusted resource for readers across the country. With award-winning writing and photography covering everything from politics and food to theater and fashion, the magazine's consistent mission has been to reflect back to its audience the energy and excitement of the city itself, while celebrating New York as both a place and an idea.",
       "image": "http://books.google.com/books/content?id=A-ECAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "None"
     },
     {
@@ -74,7 +86,9 @@
       "short_description": "Popular Mechanics inspires, instructs and influences readers to help them master the modern world. Whether it’s practical DIY home-improvement tips, gadgets and digital technology, information on the newest cars or the latest breakthroughs in science -- PM is the ultimate guide to our high-tech lifestyle.",
       "image": "http://books.google.com/books/content?id=a-EDAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "None"
     },
     {
@@ -85,7 +99,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=cOvzs_ltOx4C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Meteorology"],
+      "categories": [
+        "Meteorology"
+      ],
       "ISBN": "UCBK:C033262416"
     },
     {
@@ -96,7 +112,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=WaHksPbL39AC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "BL:A0021974900"
     },
     {
@@ -107,7 +125,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=1VNhR53sAB0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Authors"],
+      "categories": [
+        "Authors"
+      ],
       "ISBN": "SRLF:D0007615933"
     },
     {
@@ -118,7 +138,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=iByD4vOB8AYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["American literature"],
+      "categories": [
+        "American literature"
+      ],
       "ISBN": "STANFORD:36105028010739"
     },
     {
@@ -129,7 +151,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=qb0JAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Art"],
+      "categories": [
+        "Art"
+      ],
       "ISBN": "STANFORD:36105029463184"
     },
     {
@@ -140,7 +164,9 @@
       "short_description": "This concordance aligns the Targum and the Masoretic text in a convenient way, disclosing for the first time the expositional wealth of the Targum to the Prophets. With Hebrew-Aramaic index.",
       "image": "http://books.google.com/books/content?id=lonHW-W-1O0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Religion"],
+      "categories": [
+        "Religion"
+      ],
       "ISBN": "9004102779"
     },
     {
@@ -151,7 +177,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=t-qMI_l5bJIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "NLS:V000565854"
     },
     {
@@ -162,7 +190,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=zOTUAAAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "IND:30000081549994"
     },
     {
@@ -173,7 +203,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=QqRC9wZMxxAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Religion"],
+      "categories": [
+        "Religion"
+      ],
       "ISBN": "9004104623"
     },
     {
@@ -184,7 +216,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=UsENSaInc9MC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Hebrew language"],
+      "categories": [
+        "Hebrew language"
+      ],
       "ISBN": "NLI:2010604-10"
     },
     {
@@ -195,7 +229,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=yFAB3dJ3HHgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "BL:A0021970424"
     },
     {
@@ -206,7 +242,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=a-xOnCp-3noC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "BL:A0022108572"
     },
     {
@@ -217,7 +255,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=NamyhpiMCuQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Clergy"],
+      "categories": [
+        "Clergy"
+      ],
       "ISBN": "HARVARD:32044029886249"
     },
     {
@@ -228,7 +268,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=Hlo_aH173uoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Horses"],
+      "categories": [
+        "Horses"
+      ],
       "ISBN": "MINN:31951D02060383X"
     },
     {
@@ -239,7 +281,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=Bj-be5_C5NAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "BL:A0022013016"
     },
     {
@@ -250,7 +294,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=Hn234i30NV0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Asia"],
+      "categories": [
+        "Asia"
+      ],
       "ISBN": "UCSD:31822041815861"
     },
     {
@@ -261,7 +307,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=YM_21yyfPNUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "BL:A0022696523"
     },
     {
@@ -272,7 +320,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=XHyvKN3qJ5wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "BL:A0021761125"
     },
     {
@@ -283,7 +333,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=gQo24ZEO67oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "BL:A0021869697"
     },
     {
@@ -294,7 +346,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=XA1CN22onEgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Celibacy"],
+      "categories": [
+        "Celibacy"
+      ],
       "ISBN": "UOM:69015000001103"
     },
     {
@@ -305,7 +359,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=8m_Yf-tS4TEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "BL:A0021806083"
     },
     {
@@ -316,7 +372,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=GOUbAbq33q4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "BL:A0021970351"
     },
     {
@@ -327,7 +385,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=fpVOAQAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Judaism"],
+      "categories": [
+        "Judaism"
+      ],
       "ISBN": "UIUC:30112084991048"
     },
     {
@@ -338,7 +398,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=UaIvAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Israelis"],
+      "categories": [
+        "Israelis"
+      ],
       "ISBN": "STANFORD:36105132297347"
     },
     {
@@ -349,7 +411,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=ERMfXg92pB4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Hebrew language"],
+      "categories": [
+        "Hebrew language"
+      ],
       "ISBN": "NLI:2087706-10"
     },
     {
@@ -360,7 +424,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=5I_q52-HJCYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Music"],
+      "categories": [
+        "Music"
+      ],
       "ISBN": "UCI:31970001387718"
     },
     {
@@ -371,7 +437,9 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=jwXctWt0uDIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Uncategorized"],
+      "categories": [
+        "Uncategorized"
+      ],
       "ISBN": "BSB:BSB11338997"
     },
     {
@@ -382,19 +450,23 @@
       "short_description": "No Description",
       "image": "http://books.google.com/books/content?id=Ma84AAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "num_copies": 5,
-      "categories": ["Judaism"],
+      "categories": [
+        "Judaism"
+      ],
       "ISBN": "STANFORD:36105018288485"
     },
     {
-      "id": "1d86",
-      "name": "efv",
-      "author": "Unknown",
+      "id": "f874",
+      "name": "The Lord of the Rings",
+      "author": "J. R. R. Tolkien",
       "num_pages": 0,
-      "short_description": "No Description",
-      "image": "https://example.com/no-image.jpg",
-      "num_copies": "vdfvd",
-      "categories": ["Uncategorized"],
-      "ISBN": "None"
+      "short_description": "Begin your journey into Middle-earth. A New Legend Begins on Prime Video, in The Lord of the Rings: The Rings of Power. This one-volume, paperback edition includes The Fellowship of the Ring, The Two Towers, and The Return of the King, together with the Appendices in full. Sauron, the Dark Lord, has gathered to him all the Rings of Power - the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring - the ring that rules them all - which has fallen into the hands of the hobbit, Bilbo Baggins. In a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as the Ring is entrusted to his care. He must leave his home and make a perilous journey across the realms of Middle-earth to the Crack of Doom, deep inside the territories of the Dark Lord. There he must destroy the Ring forever and foil the Dark Lord in his evil purpose.",
+      "image": "http://books.google.com/books/content?id=GfrqzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Fiction"
+      ],
+      "ISBN": "0008537763"
     }
   ],
   "history": [
@@ -453,6 +525,22 @@
       "ISBN": "0008537763",
       "action": "add new book",
       "date": "29/05/2024, 10:46"
+    },
+    {
+      "id": "51f5",
+      "image": "https://example.com/no-image.jpg",
+      "bookName": "efv",
+      "ISBN": "None",
+      "action": "delete",
+      "date": "29/05/2024, 10:56"
+    },
+    {
+      "id": "e8ac",
+      "image": "http://books.google.com/books/content?id=GfrqzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "bookName": "The Lord of the Rings",
+      "ISBN": "0008537763",
+      "action": "add new book",
+      "date": "29/05/2024, 10:57"
     }
   ]
 }
