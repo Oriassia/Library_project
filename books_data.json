@@ -421,6 +421,38 @@
       "ISBN": "9781847651341",
       "action": "Increment",
       "date": "28/05/2024, 18:26"
+    },
+    {
+      "id": "0676",
+      "image": "http://books.google.com/books/content?id=hzVxiw2DiOsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "The Four Agreements",
+      "ISBN": "9781934408018",
+      "action": "Increment",
+      "date": "28/05/2024, 23:07"
+    },
+    {
+      "id": "dde1",
+      "image": "http://books.google.com/books/content?id=RSevkFe_I4EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "A New and Easy Method of Learning Hebrew Without Points",
+      "ISBN": "UBBS:UBBS-00116210",
+      "action": "delete",
+      "date": "29/05/2024, 10:19"
+    },
+    {
+      "id": "a07e",
+      "image": "http://books.google.com/books/content?id=0U5XDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookName": "The Laws of Human Nature",
+      "ISBN": "9781782833888",
+      "action": "add new book",
+      "date": "29/05/2024, 10:31"
+    },
+    {
+      "id": "0161",
+      "image": "http://books.google.com/books/content?id=GfrqzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "bookName": "The Lord of the Rings",
+      "ISBN": "0008537763",
+      "action": "add new book",
+      "date": "29/05/2024, 10:46"
     }
   ]
 }

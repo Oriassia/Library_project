@@ -91,14 +91,14 @@ li img {
 .book-card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  font-size: 18px;
-  padding: 30px;
+  gap: 30px;
+  font-size: 20px;
+  padding: 40px;
   padding-inline: 50px;
   margin-top: 25px;
   width: 80%;
 
-  background: white;
+  background: rgba(2, 47, 70, 0.1);
   border-radius: 10px;
   transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -188,7 +188,7 @@ footer {
   width: 70%;
   font-size: 18px;
 
-  background: #023047;
+  background: rgba(2, 47, 70, 0.5);
   border-radius: 10px;
   transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -198,7 +198,7 @@ footer {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   background-color: rgb(232, 223, 193);
 
   border-radius: 10px;

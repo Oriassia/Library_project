@@ -71,12 +71,13 @@
             <option value="book-isbn">By ISBN</option>
           </select>
           <input
+           oninput="searchBookFromGoogle()"
             class="search-book-from-google-input"
-            type="text"
+            type="search"
             placeholder="Enter Book name/ISBN"
           />
 
-          <button onclick="searchBookFromGoogle()">Search</button>
+          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
 
         <div style="display: none" class="add-book-card shadow"></div>
@@ -126,6 +127,7 @@
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="books_script.js"></script>
     <script src="add_book.js"></script>
   </body>
 </html>

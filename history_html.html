@@ -76,7 +76,7 @@
       async function showHistory() {
         try {
           const response = await axios.get("http://localhost:8001/history");
-          const historyData = response.data;
+          const historyData = response.data.reverse();
           let historyTableElem = document.querySelector(".history-table");
 
           // Clear existing rows in case the function is called multiple times

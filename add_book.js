@@ -1,6 +1,3 @@
-const localLibraryUrl = "http://localhost:8001/books";
-let worldLibraryUrl = "https://www.googleapis.com/books/v1/volumes";
-
 const form = document.querySelector(".add-book-form");
 const bookNameInput = document.querySelector("#name");
 const authorInput = document.querySelector("#author");
@@ -37,11 +34,11 @@ function adjustHeight(element) {
 
 function addBookFromGoogle() {}
 
-const elementInputValue = document.querySelector(".search-book-from-google-input");
+const elementInputValue = document.querySelector(
+  ".search-book-from-google-input"
+);
 const elementSelect = document.querySelector("#add-book");
 const elementCard = document.querySelector(".add-book-card");
-
-
 
 async function searchBookFromGoogle() {
   let response;
@@ -63,8 +60,13 @@ function printList(array) {
             book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail
           }" alt="">
           <div>
-          <p><h3>Name:</h3> ${book.volumeInfo.title}</p>
+          <p><h3>Name:</h3> ${stringLengthLimit(book.volumeInfo.title, 30)}</p>
           <p><h3>Author:</h3> ${book.volumeInfo.authors}</p>
+          <p><h3>ISBN:</h3> ${
+            book.volumeInfo.industryIdentifiers
+              ? book.volumeInfo.industryIdentifiers[0].identifier
+              : "None"
+          }</p>
           </div>
           <button class = "add-book-button">Add Book</button>
         </div>`;
@@ -111,5 +113,7 @@ async function addBookToData(book) {
       ? book.volumeInfo.industryIdentifiers[0].identifier
       : "None",
   };
-  await axios.post(localLibraryUrl, bookToPost);
+  await axios
+    .post(localLibraryUrl, bookToPost)
+    .then(addToHistory("add new book", bookToPost));
 }
