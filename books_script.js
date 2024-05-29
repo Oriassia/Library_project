@@ -16,7 +16,9 @@ function inIt() {
 }
 
 async function showBookByPage(pageNum) {
-  const response = await axios.get(`${localLibraryUrl}?_page=${pageNum}`);
+  const response = await axios.get(
+    `${localLibraryUrl}?_page=${pageNum}&_per_page=5`
+  );
   const booksArray = response.data.data;
   console.log(response.data.data);
   next = response.data.next;
@@ -58,12 +60,12 @@ function showBookCard(book) {
   <div><img class = "shadow"  src="${book.image}"></img></div>
 
   
+  
   <div> <p id = ${book.id}><h3>ID:</h3> ${book.id}</p></div>
   <div><p><h3>Name:</h3> ${book.name}</p></div>
   
 
    
-  
   <div><p> <h3>Author:</h3> ${book.author}</p></div>
   <div> <p><h3>Pages:</h3> ${book.num_pages}</p></div>
   <div><p> <h3>Description:</h3> ${book.short_description}</p></div>
@@ -231,7 +233,6 @@ function searchPageToggle(action) {
   }
 }
 
-
 function printSearchList(index) {
   if (!totalBooksArray[index]) {
     searchByInputTest().then(() => {
@@ -249,7 +250,7 @@ function printSearchList(index) {
       </li>`;
     }
     const liNodeList = document.querySelectorAll("li");
-  
+
     liNodeList.forEach((li, i) => {
       li.onclick = () => showBookCard(array[i]);
     });

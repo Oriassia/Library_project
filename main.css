@@ -91,11 +91,13 @@ li img {
 .book-card {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  /* gap: 30px; */
+  justify-content: space-between;
   font-size: 20px;
   padding: 40px;
   padding-inline: 50px;
-  margin-top: 25px;
+  margin-block: auto;
+  margin-top: 80px;
   width: 80%;
 
   background: rgba(2, 47, 70, 0.1);
