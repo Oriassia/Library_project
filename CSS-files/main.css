@@ -86,6 +86,7 @@ svg {
   border: solid 1px #bebebe;
   transition: 0.6s;
   cursor: pointer;
+  position: relative;
 }
 .books-content li:hover {
   transform: scale(1.05);
@@ -301,4 +302,10 @@ button:hover {
   position: absolute;
   right: 20px;
   top: 20px;
+}
+
+.fav-in-li {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }

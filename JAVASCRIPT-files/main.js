@@ -249,12 +249,11 @@ async function runSearch() {
   searchResultsArray = sliceArrayByNum(booksByInputArray, 5);
   console.log(searchResultsArray);
   displaySearchResults("next");
-}
-else{
-  window.location.href = "/home_html.html";
-}
   }
-  
+  else{
+    window.location.href = "/HTML-files/home_html.html";
+  }
+}
 
 function displaySearchResults(action) {
   switch (action) {
