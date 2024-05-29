@@ -51,11 +51,13 @@
           </g>
         </svg>
         <div class="search-bar">
-          <input type="text" placeholder="Book name" class="search-bar-input" />
-          <i
-            class="fa-solid fa-magnifying-glass"
-            onclick="searchPageToggle()"
-          ></i>
+          <input
+            oninput="searchPageToggle()"
+            type="text"
+            placeholder="Book name"
+            class="search-bar-input"
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </div>
       <nav class="nav-bar">
@@ -69,15 +71,15 @@
       <div class="books-content">
         <div class="books-list-container">
           <div class="books-list-container-header"></div>
-          <ol class="books-list"></ol>
           <div class="next-previous">
             <button class="prev" onclick="previousPage()">Previous</button>
             <button class="next" onclick="nextPage()">Next</button>
           </div>
-          <div style="display: none" class="next-previous-search">
+          <div style="display: none" class="next-previous search">
             <button onclick="searchPageToggle(`previous`)">Previous</button>
             <button onclick="searchPageToggle()">Next</button>
           </div>
+          <ol class="books-list"></ol>
         </div>
         <div class="book-card shadow"></div>
       </div>

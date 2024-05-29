@@ -186,7 +186,7 @@ function getCurrentDateTime() {
 
 function buttonsToggle() {
   const nextPrevious = document.querySelector(".next-previous");
-  const nextPreviousSearch = document.querySelector(".next-previous-search");
+  const nextPreviousSearch = document.querySelector(".next-previous.search");
 
   if (nextPrevious) {
     nextPrevious.style.display = "none";
@@ -204,6 +204,7 @@ let currentBooksArray = [];
 let totalSearchPages = 1;
 
 function searchPageToggle(action) {
+  if (event) event.preventDefault(); //  
   if (totalBooksArray.length === 0) {
     console.log("yessssssssss");
     currentArrayIndex = 0;
@@ -231,11 +232,28 @@ function searchPageToggle(action) {
     printSearchList(currentArrayIndex);
   }
 }
+
+
+function printSearchList(index) {
+  if (!totalBooksArray[index]) {
+    searchByInputTest().then(() => {
+      printSearchList(index);
+    });
+  } else {
+    elementBooksList.innerHTML = "";
+    for (const book of totalBooksArray[index]) {
+      elementBooksList.innerHTML += `<li>
+      <img class = "shadow"  src="${book.image}" alt="">
+      <div>
+      <p><h3>Name:</h3> ${book.name}</p>
+      <p><h3>Author:</h3> ${book.author}</p>
+      </div>
+      </li>`;
     }
     const liNodeList = document.querySelectorAll("li");
-
+  
     liNodeList.forEach((li, i) => {
-      li.onclick = () => showBookCard(totalBooksArray[index][i]);
+      li.onclick = () => showBookCard(array[i]);
     });
   }
 }
@@ -282,4 +300,4 @@ async function searchByInputTest() {
   if (currentBooksArray.length > 0) {
     totalBooksArray.push(currentBooksArray);
   }
-
+}
