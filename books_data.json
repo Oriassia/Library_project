@@ -754,6 +754,45 @@
         "Self-Help"
       ],
       "ISBN": "9781101042458"
+    },
+    {
+      "id": "07b2",
+      "name": "Can't Hurt Me",
+      "author": "David Goggins",
+      "num_pages": 386,
+      "short_description": "New York Times Bestseller Over 2.5 million copies sold For David Goggins, childhood was a nightmare -- poverty, prejudice, and physical abuse colored his days and haunted his nights. But through self-discipline, mental toughness, and hard work, Goggins transformed himself from a depressed, overweight young man with no future into a U.S. Armed Forces icon and one of the world's top endurance athletes. The only man in history to complete elite training as a Navy SEAL, Army Ranger, and Air Force Tactical Air Controller, he went on to set records in numerous endurance events, inspiring Outside magazine to name him \"The Fittest (Real) Man in America.\" In Can't Hurt Me, he shares his astonishing life story and reveals that most of us tap into only 40% of our capabilities. Goggins calls this The 40% Rule, and his story illuminates a path that anyone can follow to push past pain, demolish fear, and reach their full potential.",
+      "image": "http://books.google.com/books/content?id=OSchEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Health & Fitness"
+      ],
+      "ISBN": "9781544512266"
+    },
+    {
+      "id": "ee40",
+      "name": "Atomic Habits",
+      "author": "James Clear",
+      "num_pages": 322,
+      "short_description": "The #1 New York Times bestseller. Over 10 million copies sold! Tiny Changes, Remarkable Results No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results. If you're having trouble changing your habits, the problem isn't you. The problem is your system. Bad habits repeat themselves again and again not because you don't want to change, but because you have the wrong system for change. You do not rise to the level of your goals. You fall to the level of your systems. Here, you'll get a proven system that can take you to new heights. Clear is known for his ability to distill complex topics into simple behaviors that can be easily applied to daily life and work. Here, he draws on the most proven ideas from biology, psychology, and neuroscience to create an easy-to-understand guide for making good habits inevitable and bad habits impossible. Along the way, readers will be inspired and entertained with true stories from Olympic gold medalists, award-winning artists, business leaders, life-saving physicians, and star comedians who have used the science of small habits to master their craft and vault to the top of their field. Learn how to: make time for new habits (even when life gets crazy); overcome a lack of motivation and willpower; design your environment to make success easier; get back on track when you fall off course; ...and much more. Atomic Habits will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits--whether you are a team looking to win a championship, an organization hoping to redefine an industry, or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal.",
+      "image": "http://books.google.com/books/content?id=lFhbDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Business & Economics"
+      ],
+      "ISBN": "9780735211308"
+    },
+    {
+      "id": "40dc",
+      "name": "Inside Narnia",
+      "author": "Devin Brown",
+      "num_pages": 256,
+      "short_description": "Insightful and thorough, \"Inside Narnia\" will dig deeper into Lewis's magicalworld to reveal biblical truths that often go uncovered.",
+      "image": "http://books.google.com/books/content?id=VYC8Ks0vRncC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 6,
+      "categories": [
+        "Literary Criticism"
+      ],
+      "ISBN": "9780801065996"
     }
   ]
 }
