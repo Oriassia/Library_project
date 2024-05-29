@@ -793,6 +793,32 @@
         "Literary Criticism"
       ],
       "ISBN": "9780801065996"
+    },
+    {
+      "id": "ae5f",
+      "name": "New York Magazine",
+      "author": "Unknown",
+      "num_pages": 140,
+      "short_description": "New York magazine was born in 1968 after a run as an insert of the New York Herald Tribune and quickly made a place for itself as the trusted resource for readers across the country. With award-winning writing and photography covering everything from politics and food to theater and fashion, the magazine's consistent mission has been to reflect back to its audience the energy and excitement of the city itself, while celebrating New York as both a place and an idea.",
+      "image": "http://books.google.com/books/content?id=a-UCAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Uncategorized"
+      ],
+      "ISBN": "None"
+    },
+    {
+      "id": "5474",
+      "name": "Libri ebraici a Mantova: Le edizioni del XVI secolo nella biblioteca della comunità ebraica",
+      "author": "Giulio Busi",
+      "num_pages": 316,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=fIBFAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Antiques & Collectibles"
+      ],
+      "ISBN": "STANFORD:36105021168849"
     }
   ]
 }
