@@ -26,21 +26,26 @@ async function showBookByPage(pageNum) {
   totalPages = response.data.pages;
   printList(booksArray);
   showBookCard(booksArray[0]);
+  const pagingCountDisplay = document.querySelector(".books-list-container-header .pages-count")
+  pagingCountDisplay.textContent = `Page ${pageNum} of ${totalPages}`
 }
 
 function printList(array) {
   elementBooksList.innerHTML = "";
   for (const book of array) {
     const newLiElem = document.createElement("li")
-    newLiElem.innerHTML = `<img class = "shadow"  src="${book.image}" alt="">
-    <div>
-    <div class="fav-in-li"></div>
-    <p><h3>Name:</h3> ${book.name}</p>
-    <p><h3>Author:</h3> ${book.author}</p>
-    </div>`;
-    // const liFavToggleContainer = document.querySelector(".fav-in-li")
-    // checkAndToggleFavorite(book.id,liFavToggleContainer)
+    newLiElem.innerHTML = `
+        <img class = "shadow" src="${book.image}" alt="">
+        <div>
+          <p><h3>Name:</h3> ${book.name}</p>
+          <p><h3>Author:</h3> ${book.author}</p>
+    </div>
+    `;
 
+    const favIconContainer = document.createElement("div")
+    favIconContainer.classList.add("fav-in-li")
+    checkAndToggleFavorite(book.id,favIconContainer)
+    newLiElem.appendChild(favIconContainer)
     elementBooksList.appendChild(newLiElem);    
   }
   const liNodeList = document.querySelectorAll("li");
@@ -107,8 +112,8 @@ async function showBookCard(book) {
 }
 
 async function checkAndToggleFavorite(bookId, place) {
-  const favoriteContainer = document.querySelector(".favorite-icon");
-  favoriteContainer.innerHTML = ''; // Clear previous icons
+  // const favoriteContainer = document.querySelector(".favorite-icon");
+  place.innerHTML = ''; // Clear previous icons
   let favoriteIconElem;
 
   try {
@@ -125,7 +130,7 @@ async function checkAndToggleFavorite(bookId, place) {
     favoriteIconElem.className = 'fa-regular fa-star';
   }
 
-  favoriteContainer.appendChild(favoriteIconElem);
+  place.appendChild(favoriteIconElem);
 }
 
 
@@ -226,12 +231,101 @@ function buttonsToggle() {
     nextPreviousSearch.style.display = "block";
   }
 }
-let currentInputValue = null;
-let currentArrayIndex = 0;
-let searchPageIndex = 1;
-let totalBooksArray = [];
-let currentBooksArray = [];
-let totalSearchPages = 1;
+
+let searchResultsArrayIndex;
+let searchResultsArray;
+
+async function runSearch() {
+  const inputValue = document.querySelector(".search-bar-input").value;
+  if(inputValue){
+    buttonsToggle();
+  searchResultsArray = null;
+  searchResultsArrayIndex = -1;
+  const DataResponse = await axios.get(localLibraryUrl);
+  const booksDataArray = DataResponse.data;
+  console.log(booksDataArray);
+  const booksByInputArray = filterArrayByStr(booksDataArray, inputValue);
+  console.log(booksByInputArray);
+  searchResultsArray = sliceArrayByNum(booksByInputArray, 5);
+  console.log(searchResultsArray);
+  displaySearchResults("next");
+}
+else{
+  window.location.href = "/home_html.html";
+}
+  }
+  
+
+function displaySearchResults(action) {
+  switch (action) {
+    case "next":
+      if (searchResultsArray && searchResultsArray[searchResultsArrayIndex + 1]) {
+        printList(searchResultsArray[searchResultsArrayIndex + 1]);
+        searchResultsArrayIndex++;
+      }
+      break;
+
+    case "previous":
+      if (searchResultsArrayIndex > 0) {
+        searchResultsArrayIndex--;
+        printList(searchResultsArray[searchResultsArrayIndex]);
+      }
+      break;
+
+    default:
+      break;
+  }
+  const pagingCountDisplay = document.querySelector(".books-list-search-header .pages-count")
+  pagingCountDisplay.textContent = `Page ${searchResultsArrayIndex + 1} of ${searchResultsArray.length}`
+}
+
+function filterArrayByStr(array, str) {
+  const lowerCaseStr = str.toLowerCase();
+  return array.filter((item) => item.name.toLowerCase().includes(lowerCaseStr));
+}
+
+function sliceArrayByNum(array, num) {
+  const slicedArray = [];
+  while (array.length >= num) {
+    const slicedItems = array.slice(0, num);
+    slicedArray.push(slicedItems);
+    array = array.slice(num); // Update the array by removing the sliced elements
+  }
+  if (array.length > 0) {
+    slicedArray.push(array); // Add remaining elements
+  }
+  return slicedArray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let currentInputValue = null;
+// let currentArrayIndex = 0;
+// let searchPageIndex = 1;
+// let totalBooksArray = [];
+// let currentBooksArray = [];
+// let totalSearchPages = 1;
 
 // function searchPageToggle(action) {
 //   if (totalBooksArray.length === 0) {
