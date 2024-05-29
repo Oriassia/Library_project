@@ -493,54 +493,34 @@
       "ISBN": "9781847651341",
       "action": "Increment",
       "date": "28/05/2024, 18:26"
+    }
+  ],
+  "favorites": [
+    {
+      "id": "5474",
+      "name": "Libri ebraici a Mantova: Le edizioni del XVI secolo nella biblioteca della comunità ebraica",
+      "author": "Giulio Busi",
+      "num_pages": 316,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=fIBFAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Antiques & Collectibles"
+      ],
+      "ISBN": "STANFORD:36105021168849"
     },
     {
-      "id": "0676",
-      "image": "http://books.google.com/books/content?id=hzVxiw2DiOsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "bookName": "The Four Agreements",
-      "ISBN": "9781934408018",
-      "action": "Increment",
-      "date": "28/05/2024, 23:07"
-    },
-    {
-      "id": "dde1",
-      "image": "http://books.google.com/books/content?id=RSevkFe_I4EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "bookName": "A New and Easy Method of Learning Hebrew Without Points",
-      "ISBN": "UBBS:UBBS-00116210",
-      "action": "delete",
-      "date": "29/05/2024, 10:19"
-    },
-    {
-      "id": "a07e",
-      "image": "http://books.google.com/books/content?id=0U5XDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "bookName": "The Laws of Human Nature",
-      "ISBN": "9781782833888",
-      "action": "add new book",
-      "date": "29/05/2024, 10:31"
-    },
-    {
-      "id": "0161",
-      "image": "http://books.google.com/books/content?id=GfrqzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "bookName": "The Lord of the Rings",
-      "ISBN": "0008537763",
-      "action": "add new book",
-      "date": "29/05/2024, 10:46"
-    },
-    {
-      "id": "51f5",
-      "image": "https://example.com/no-image.jpg",
-      "bookName": "efv",
-      "ISBN": "None",
-      "action": "delete",
-      "date": "29/05/2024, 10:56"
-    },
-    {
-      "id": "e8ac",
-      "image": "http://books.google.com/books/content?id=GfrqzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "bookName": "The Lord of the Rings",
-      "ISBN": "0008537763",
-      "action": "add new book",
-      "date": "29/05/2024, 10:57"
+      "id": "982b",
+      "name": "A bilingual concordance to the Targum of the Prophets",
+      "author": "Johannes Cornelis Moor",
+      "num_pages": 368,
+      "short_description": "Now updated with new material on AIDS and support groups, this “completely non-judgmental, very informative, and extremely effective book” (Library Journal)is a standard reference for parents of gays and lesbians.",
+      "image": "http://books.google.com/books/content?id=11wlAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Bibles"
+      ],
+      "ISBN": "STANFORD:36105110278483"
     }
   ]
 }

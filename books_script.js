@@ -54,14 +54,18 @@ function previousPage() {
   if (previous !== null) showBookByPage(previous);
 }
 
-function showBookCard(book) {
+async function showBookCard(book) {
   elementBookCard.innerHTML = "";
+  const bookId = book.id.toString()
   elementBookCard.innerHTML += `
-  <div><img class = "shadow"  src="${book.image}"></img></div>
+  
+  <div class="favorite-icon">
+  </div>
+  <div><img class = "shadow" src="${book.image}"></img></div>
 
   
   
-  <div> <p id = ${book.id}><h3>ID:</h3> ${book.id}</p></div>
+  <div><p><h3>ID:</h3> ${book.id}</p></div>
   <div><p><h3>Name:</h3> ${book.name}</p></div>
   
 
@@ -80,6 +84,8 @@ function showBookCard(book) {
   <button class = "Increment-button">Increment copies</button>
   <button class = "Decrement-button">Decrement copies</button>
   </div>`;
+
+  checkAndToggleFavorite(bookId);
 
   const elemDeleteButton = document.querySelector(".delete-button");
   const elemIncrementButton = document.querySelector(".Increment-button");
@@ -100,6 +106,30 @@ function showBookCard(book) {
     addToHistory("Decrement", book);
   };
 }
+
+async function checkAndToggleFavorite(bookId) {
+  const favoriteContainer = document.querySelector(".favorite-icon");
+  favoriteContainer.innerHTML = ''; // Clear previous icons
+  let favoriteIconElem;
+
+  try {
+    const favoriteResponse = await axios.get(`http://localhost:8001/favorites/${bookId}`);
+    
+    // Book is a favorite
+    favoriteIconElem = document.createElement('i');
+    favoriteIconElem.setAttribute('onclick', `removeFavoriteFromData('${bookId}')`);
+    favoriteIconElem.className = 'fa-solid fa-star';
+  } catch (error) {
+    // Handle case where book is not a favorite
+    favoriteIconElem = document.createElement('i');
+    favoriteIconElem.setAttribute('onclick', `addFavoriteToData('${bookId}')`);
+    favoriteIconElem.className = 'fa-regular fa-star';
+  }
+
+  favoriteContainer.appendChild(favoriteIconElem);
+}
+
+
 
 async function addToHistory(action, book) {
   const postData = {
@@ -303,4 +333,32 @@ async function searchByInputTest() {
 
 function stringLengthLimit(str, maxLength) {
   return str.length > maxLength ? `${str.slice(0, maxLength)}...` : str;
+}
+
+
+async function addFavoriteToData(bookId){
+  const response = await axios.get(`${localLibraryUrl}/${bookId}`)
+  const bookData = response.data
+
+  const favoriteBook = {
+    id:bookData.id,
+    name: bookData.name,
+    author: bookData.author,
+    num_pages: bookData.num_pages,
+    short_description: bookData.short_description,
+    image: bookData.image,
+    num_copies: bookData.num_copies,
+    categories: bookData.categories,
+    ISBN: bookData.ISBN
+  }
+   await axios.post("http://localhost:8001/favorites",favoriteBook);
+}
+
+async function removeFavoriteFromData(bookId) {
+  try {
+    await axios.delete(`http://localhost:8001/favorites/${bookId}`);
+    
+  } catch (error) {
+    console.error('Error removing favorite book:', error);
+  }
 }
