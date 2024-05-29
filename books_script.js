@@ -31,13 +31,17 @@ async function showBookByPage(pageNum) {
 function printList(array) {
   elementBooksList.innerHTML = "";
   for (const book of array) {
-    elementBooksList.innerHTML += `<li>
-    <img class = "shadow"  src="${book.image}" alt="">
+    const newLiElem = document.createElement("li")
+    newLiElem.innerHTML = `<img class = "shadow"  src="${book.image}" alt="">
     <div>
+    <div class="fav-in-li"></div>
     <p><h3>Name:</h3> ${book.name}</p>
     <p><h3>Author:</h3> ${book.author}</p>
-    </div>
-    </li>`;
+    </div>`;
+    // const liFavToggleContainer = document.querySelector(".fav-in-li")
+    // checkAndToggleFavorite(book.id,liFavToggleContainer)
+
+    elementBooksList.appendChild(newLiElem);    
   }
   const liNodeList = document.querySelectorAll("li");
 
@@ -59,17 +63,12 @@ async function showBookCard(book) {
   const bookId = book.id.toString()
   elementBookCard.innerHTML += `
   
-  <div class="favorite-icon">
-  </div>
+  <div class="favorite-icon"></div>
   <div><img class = "shadow" src="${book.image}"></img></div>
 
-  
-  
   <div><p><h3>ID:</h3> ${book.id}</p></div>
   <div><p><h3>Name:</h3> ${book.name}</p></div>
   
-
-   
   <div><p> <h3>Author:</h3> ${book.author}</p></div>
   <div> <p><h3>Pages:</h3> ${book.num_pages}</p></div>
   <div><p> <h3>Description:</h3> ${book.short_description}</p></div>
@@ -84,8 +83,8 @@ async function showBookCard(book) {
   <button class = "Increment-button">Increment copies</button>
   <button class = "Decrement-button">Decrement copies</button>
   </div>`;
-
-  checkAndToggleFavorite(bookId);
+  const cardFavToggleContainer = document.querySelector(".favorite-icon")
+  checkAndToggleFavorite(bookId, cardFavToggleContainer);
 
   const elemDeleteButton = document.querySelector(".delete-button");
   const elemIncrementButton = document.querySelector(".Increment-button");
@@ -107,7 +106,7 @@ async function showBookCard(book) {
   };
 }
 
-async function checkAndToggleFavorite(bookId) {
+async function checkAndToggleFavorite(bookId, place) {
   const favoriteContainer = document.querySelector(".favorite-icon");
   favoriteContainer.innerHTML = ''; // Clear previous icons
   let favoriteIconElem;
