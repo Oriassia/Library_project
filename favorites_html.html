@@ -59,56 +59,60 @@
         <a href="/home_html.html">Home</a>
         <a href="/addBook_html.html">Add book</a>
         <a href="/history_html.html">History</a>
-        <a href="">Favorite</a>
+        <a href="/favorites_html.html">Favorite</a>
       </nav>
       <div class="background"></div>
-      <div class="history-content">
-        <table class="history-table"></table>
+      <div class="favorites-content">
+        <grid style="display: grid" class="favorites-grid"></grid>
       </div>
       <img src="" alt="" />
       <footer><p>footer</p></footer>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <script src="/books_script.js"></script> -->
     <script>
-      showHistory();
+      showFavorites();
 
-      async function showHistory() {
+      async function showFavorites() {
         try {
-          const response = await axios.get("http://localhost:8001/history");
-          const historyData = response.data;
-          let historyTableElem = document.querySelector(".history-table");
+          const response = await axios.get("http://localhost:8001/favorites");
+          const favoritesData = response.data;
+          console.log(favoritesData);
+          const favoritesGridElem = document.querySelector(".favorites-grid");
+          favoritesGridElem.innerHTML = "";
 
-          // Clear existing rows in case the function is called multiple times
-          historyTableElem.innerHTML = `<tr>
-            <th>Place</th>
-            <th>Image</th>
-            <th>Name</th>
-            <th>ISBN</th>
-            <th>Action</th>
-            <th>Date & Time</th>
-          </tr>`;
-
-          for (const obj of historyData) {
-            historyTableElem.innerHTML += `<tr>
-                        <td>${historyData.indexOf(obj) + 1}</td>
-                        <td><img src="${obj.image}" alt=""></td>
-                        <td>${obj.bookName}</td>
-                        <td>${obj.ISBN}</td>
-                        <td>${obj.action}</td>
-                        <td>${obj.date}</td>
-                    </tr>`;
+          for (const book of favoritesData) {
+            favoritesGridElem.innerHTML += `<div class = "singal-favorite-card shadow" >
+              <i class="fa-solid fa-star"></i>  
+              <img class = "shadow"  src="${book.image}" alt="">
+                <div>
+                <p><h3>Name:</h3> ${stringLengthLimit(book.name, 30)}</p>
+                <p><h3>Author:</h3> ${book.author}</p>
+                <p><h3>ISBN:</h3> ${book.ISBN}
+                    : "None"
+                }</p>
+                </div>
+                <button onclick="removeFavoriteFromData('${
+                  book.id
+                }')" >Remove book</button>
+              </div>`;
           }
-
-          document.querySelector(".history-content").style.display = "block";
         } catch (error) {
-          console.error("Error fetching history data:", error);
+          // console.error("Error fetching :", error);
         }
       }
 
-      // Example function to demonstrate button functionality
-      async function fetchMultiplePages() {
-        console.log("fetchMultiplePages called");
+      function stringLengthLimit(str, maxLength) {
+        return str.length > maxLength ? `${str.slice(0, maxLength)}...` : str;
+      }
+
+      async function removeFavoriteFromData(bookId) {
+        try {
+          await axios.delete(`http://localhost:8001/favorites/${bookId}`);
+        } catch (error) {
+          console.error("Error removing favorite book:", error);
+        }
       }
     </script>
   </body>

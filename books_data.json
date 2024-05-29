@@ -495,5 +495,32 @@
       "date": "28/05/2024, 18:26"
     }
   ],
-  "favorites": []
+  "favorites": [
+    {
+      "id": "5474",
+      "name": "Libri ebraici a Mantova: Le edizioni del XVI secolo nella biblioteca della comunità ebraica",
+      "author": "Giulio Busi",
+      "num_pages": 316,
+      "short_description": "No Description",
+      "image": "http://books.google.com/books/content?id=fIBFAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Antiques & Collectibles"
+      ],
+      "ISBN": "STANFORD:36105021168849"
+    },
+    {
+      "id": "982b",
+      "name": "A bilingual concordance to the Targum of the Prophets",
+      "author": "Johannes Cornelis Moor",
+      "num_pages": 368,
+      "short_description": "Now updated with new material on AIDS and support groups, this “completely non-judgmental, very informative, and extremely effective book” (Library Journal)is a standard reference for parents of gays and lesbians.",
+      "image": "http://books.google.com/books/content?id=11wlAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "num_copies": 5,
+      "categories": [
+        "Bibles"
+      ],
+      "ISBN": "STANFORD:36105110278483"
+    }
+  ]
 }
