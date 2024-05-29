@@ -19,7 +19,10 @@
   </head>
   <body>
     <main>
-      <div>
+      <div class="header-container">
+        <a href="home_html.html"
+          ><img class="harvard-logo" src="harvard-logo.png" alt=""
+        /></a>
         <div class="search-bar">
           <input type="text" placeholder="Book name" class="search-bar-input" />
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -52,7 +55,7 @@
 
         <div style="display: none" class="add-book-card shadow"></div>
       </div>
-      <div class="add-book-content">
+      <div class="add-book-content book-card shadow">
         <h2>Add Book By Yourself</h2>
         <form onsubmit="createNewBook(event)" class="add-book-form">
           <label for="name">Book Name:</label>
@@ -86,7 +89,15 @@
         </form>
       </div>
 
-      <footer><p>footer</p></footer>
+      <footer>
+        <p>This site © 2024 Joni Uzan & Ori Assia</p>
+        <a href="https://github.com/Oriassia/Library_project" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="home_html.html"
+          ><img class="harvard-logo" src="harvard-logo.png" alt=""
+        /></a>
+      </footer>
     </main>
     <style>
       textarea {

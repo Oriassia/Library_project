@@ -115,5 +115,6 @@ async function addBookToData(book) {
   };
   await axios
     .post(localLibraryUrl, bookToPost)
-    .then(addToHistory("add new book", bookToPost));
+    .then(addToHistory("add new book", bookToPost))
+    .then(() => alert("Your Book added successfully"));
 }
